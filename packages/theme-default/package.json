@@ -1,0 +1,23 @@
+{
+  "name": "@namics-ui/theme-blue",
+  "version": "0.1.0",
+  "description": "",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "ts-node index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/color": "^3.0.0",
+    "@types/mkdirp": "^0.5.2",
+    "@types/node": "^10.12.23",
+    "chroma-js": "^2.0.2",
+    "color": "^3.1.0",
+    "mkdirp": "^0.5.1",
+    "polished": "^2.3.3",
+    "ts-node": "^8.0.2",
+    "typescript": "3.2.4"
+  }
+}
