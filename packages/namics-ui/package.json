@@ -19,6 +19,7 @@
     "preversion": "npm run lint && npm test && npm run build",
     "postpublish": "npm run build:clean"
   },
+  "repository": "adriankremer/namics-ui",
   "author": "",
   "license": "ISC",
   "devDependencies": {

@@ -1,7 +1,6 @@
 const path = require("path");
 const fs = require("fs");
 const webpack = require("webpack");
-const importToRequire = require("./src/utils/importToRequire");
 // const template = require("./src/template");
 
 const primitives = ["Box"];
@@ -54,8 +53,9 @@ const webpackDevConfig = {
 };
 
 module.exports = {
-  title: "Reakit",
+  title: "UI. Namics.",
   ignore: ["**/index.{js,jsx,ts,tsx}"],
+  pagePerSection: true,
   webpackConfig:
     process.env.NODE_ENV === "development"
       ? webpackDevConfig
@@ -69,19 +69,13 @@ module.exports = {
       uses
     };
   },
-  updateExample(props) {
-    return {
-      ...props,
-      content: importToRequire(props.content)
-    };
-  },
   logger: {
     warn: () => {}
   },
   // template,
   styleguideDir: "dist",
   styleguideComponents: {
-    StyleGuide: path.join(__dirname, "src")
+    Wrapper: path.join(__dirname, "src/Wrapper")
   },
   context: {
     defaultTheme: "namics-ui-theme-default"

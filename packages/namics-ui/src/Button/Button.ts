@@ -8,7 +8,7 @@ export interface IButtonProps extends BoxProps {
 }
 
 const ButtonComponent = styled(Box)<IButtonProps>`
-  background-color: ${props => props.theme.colors.main[500]};
+  ${props => props.theme.Button}
 `;
 
 ButtonComponent.defaultProps = {
