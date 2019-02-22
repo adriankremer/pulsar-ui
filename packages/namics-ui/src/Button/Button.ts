@@ -3,7 +3,9 @@ import styled from "../styled";
 
 import Box, { BoxProps } from "../Box";
 
-export interface IButtonProps extends BoxProps {}
+export interface IButtonProps extends BoxProps {
+  blub?: string;
+}
 
 const ButtonComponent = styled(Box)<IButtonProps>`
   background-color: ${props => props.theme.colors.main[500]};
