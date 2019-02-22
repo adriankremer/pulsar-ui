@@ -1,0 +1,17 @@
+{
+  "name": "@namics-ui/styleguide",
+  "version": "0.1.0",
+  "description": "styleguide for namics-ui",
+  "main": "index.js",
+  "scripts": {
+    "dev": "styleguidist server --open"
+  },
+  "author": "Adrian Kremer <a.kr3mer@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "4.29.5"
+  },
+  "devDependencies": {
+    "react-styleguidist": "8.0.6"
+  }
+}
