@@ -15,14 +15,16 @@
     "build:ts": "tsc --emitDeclarationOnly",
     "prebuild": "npm run build:ts",
     "build": "rollup -c",
-    "dev": "styleguidist server",
+    "dev": "styleguidist server --open",
     "preversion": "npm run lint && npm test && npm run build",
     "postpublish": "npm run build:clean"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@namics-ui/styleguide": "*",
     "@types/styled-components": "4.1.8",
+    "react-docgen-typescript": "1.12.3",
     "react-styleguidist": "8.0.6",
     "rimraf": "2.6.3",
     "rollup": "1.1.2",
