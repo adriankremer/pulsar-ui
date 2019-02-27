@@ -12,34 +12,21 @@
     {
       "login": "adriankremer",
       "name": "Adrian Kremer",
-      "avatar_url": "https://avatars3.githubusercontent.com/u/7591767?s=460&v=4",
-      "profile": "https://twitter.com/adriankremer",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/7591767?v=4",
+      "profile": "https://github.com/adriankremer",
       "contributions": [
-        "code",
-        "doc",
-        "bug",
-        "example",
-        "infra",
-        "plugin",
-        "test",
-        "review"
+        "code"
       ]
     },
     {
       "login": "zidizei",
       "name": "Patrick Lam",
-      "avatar_url": "https://avatars2.githubusercontent.com/u/470408?s=400&v=4",
-      "profile": "https://twitter.com/zidizei",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/470408?v=4",
+      "profile": "https://github.com/zidizei",
       "contributions": [
-        "code",
-        "doc",
-        "bug",
-        "example",
-        "infra",
-        "plugin",
-        "test",
-        "review"
+        "code"
       ]
-    },
-  ]
+    }
+  ],
+  "contributorsPerLine": 7
 }
