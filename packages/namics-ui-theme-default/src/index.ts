@@ -21,8 +21,13 @@ const padding = {
   left: ".5rem"
 };
 
+const border = {
+  radius: "3px"
+};
+
 export default {
   palette,
   padding,
+  border,
   ...Elements
 };
