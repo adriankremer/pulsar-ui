@@ -1,0 +1,45 @@
+{
+  "projectName": "namics-ui",
+  "projectOwner": "adriankremer",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "adriankremer",
+      "name": "Adrian Kremer",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/7591767?s=460&v=4",
+      "profile": "https://twitter.com/adriankremer",
+      "contributions": [
+        "code",
+        "doc",
+        "bug",
+        "example",
+        "infra",
+        "plugin",
+        "test",
+        "review"
+      ]
+    },
+    {
+      "login": "zidizei",
+      "name": "Patrick Lam",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/470408?s=400&v=4",
+      "profile": "https://twitter.com/zidizei",
+      "contributions": [
+        "code",
+        "doc",
+        "bug",
+        "example",
+        "infra",
+        "plugin",
+        "test",
+        "review"
+      ]
+    },
+  ]
+}
