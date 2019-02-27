@@ -1,15 +1,11 @@
 {
   "parser": "babel-eslint",
-  "extends": [
-    "../../.eslintrc"
-  ],
+  "extends": "../../.eslintrc",
   "overrides": [
     {
       "files": ["**/*.ts", "**/*.tsx"],
       "rules": {
-        "prettier/prettier": {
-          "proseWrap": false
-        }
+        "prettier/prettier": ["off"]
       }
     }
   ]
