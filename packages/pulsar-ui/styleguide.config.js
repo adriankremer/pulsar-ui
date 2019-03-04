@@ -6,7 +6,7 @@ const {
   compilerConfig,
   skipComponentsWithoutExample,
   updateExample
-} = require("@namics-ui/styleguide/styleguide.config");
+} = require("@pulsar-ui/styleguide/styleguide.config");
 
 module.exports = {
   title: "StyleGuide. Namics.",

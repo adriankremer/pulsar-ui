@@ -1,10 +1,10 @@
 {
-  "name": "namics-ui-theme-default",
+  "name": "pulsar-ui-theme-default",
   "version": "0.1.0",
   "description": "",
   "main": "lib/index.js",
   "module": "es/index.js",
-  "unpkg": "dist/namics-ui-theme-default.min.js",
+  "unpkg": "dist/pulsar-ui-theme-default.min.js",
   "types": "ts",
   "scripts": {
     "prebuild": "tsc --emitDeclarationOnly",
@@ -18,7 +18,7 @@
     "typescript": "3.2.4"
   },
   "peerDependencies": {
-    "namics-ui": "*"
+    "pulsar-ui": "*"
   },
   "dependencies": {
     "styled-tools": "1.7.1"

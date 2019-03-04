@@ -1,10 +1,10 @@
 {
-  "name": "namics-ui",
+  "name": "pulsar-ui",
   "version": "0.1.0",
   "description": "",
   "main": "lib/index.js",
   "module": "es/index.js",
-  "unpkg": "dist/namics-ui.min.js",
+  "unpkg": "dist/pulsar-ui.min.js",
   "types": "ts",
   "scripts": {
     "test": "jest",
@@ -19,11 +19,11 @@
     "preversion": "npm run lint && npm test && npm run build",
     "postpublish": "npm run build:clean"
   },
-  "repository": "adriankremer/namics-ui",
+  "repository": "adriankremer/pulsar-ui",
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@namics-ui/styleguide": "*",
+    "@pulsar-ui/styleguide": "*",
     "@types/styled-components": "4.1.8",
     "react-docgen-typescript": "1.12.3",
     "react-styleguidist": "8.0.6",

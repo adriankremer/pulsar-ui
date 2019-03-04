@@ -1,4 +1,4 @@
-import { css } from "namics-ui";
+import { css } from "pulsar-ui";
 import { palette as p, theme } from "styled-tools";
 
 const InputText = css`

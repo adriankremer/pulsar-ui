@@ -1,7 +1,7 @@
 module.exports = {
   rootDir: __dirname,
   collectCoverageFrom: [
-    "packages/namics-ui/src/**/*.{js,ts,tsx}",
+    "packages/pulsar-ui/src/**/*.{js,ts,tsx}",
     "!**/*-test.{js,ts,tsx}"
   ],
   projects: ["<rootDir>/packages/*/jest.config.js"],
