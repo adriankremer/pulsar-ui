@@ -78,7 +78,7 @@ module.exports = {
     Wrapper: path.join(__dirname, "src/Wrapper")
   },
   context: {
-    defaultTheme: "pulsar-ui-theme-default"
+    defaultTheme: "@pulsar-ui/theme-default"
   },
   compilerConfig: {
     transforms: {

@@ -1,4 +1,4 @@
-import { css } from "pulsar-ui";
+import { css } from "@pulsar-ui/core";
 import { palette as p, prop } from "styled-tools";
 
 const SliderThumb = css`

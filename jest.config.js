@@ -2,7 +2,8 @@ module.exports = {
   rootDir: __dirname,
   collectCoverageFrom: [
     "packages/pulsar-ui/src/**/*.{js,ts,tsx}",
-    "!**/*-test.{js,ts,tsx}"
+    "!**/*-test.{js,ts,tsx}",
+    "!packages/pulsar-ui/ts/**/*-test.{js,ts,tsx}"
   ],
   projects: ["<rootDir>/packages/*/jest.config.js"],
   setupFilesAfterEnv: [

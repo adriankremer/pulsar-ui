@@ -6,3 +6,6 @@ export * from "./Button";
 
 export { default as Range } from "./Input";
 export * from "./Input";
+
+export { default as Avatar } from "./Avatar";
+export * from "./Avatar";
