@@ -1,7 +1,7 @@
 {
-  "name": "@namics-ui/styleguide",
+  "name": "@pulsar-ui/styleguide",
   "version": "0.1.0",
-  "description": "styleguide for namics-ui",
+  "description": "styleguide for pulsar-ui",
   "main": "index.js",
   "scripts": {
     "dev": "styleguidist server --open"
@@ -11,8 +11,8 @@
   "dependencies": {
     "@babel/polyfill": "7.2.5",
     "diffable-html": "4.0.0",
-    "namics-ui": "^0.1.0",
-    "namics-ui-theme-default": "^0.1.0",
+    "pulsar-ui": "^0.1.0",
+    "pulsar-ui-theme-default": "^0.1.0",
     "parse-prop-types": "0.3.0",
     "react-helmet": "5.2.0",
     "react-router-dom": "4.3.1",

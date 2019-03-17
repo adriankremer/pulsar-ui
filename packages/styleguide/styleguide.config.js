@@ -30,7 +30,7 @@ const webpackCommonConfig = {
     ]
   },
   resolve: {
-    alias: { "namics-ui": path.join(__dirname, "../namics-ui/src") },
+    alias: { "pulsar-ui": path.join(__dirname, "../pulsar-ui/src") },
     extensions: [".ts", ".tsx", ".jsx", ".js"]
   }
 };
@@ -78,7 +78,7 @@ module.exports = {
     Wrapper: path.join(__dirname, "src/Wrapper")
   },
   context: {
-    defaultTheme: "namics-ui-theme-default"
+    defaultTheme: "pulsar-ui-theme-default"
   },
   compilerConfig: {
     transforms: {
@@ -90,17 +90,17 @@ module.exports = {
   sections: [
     {
       name: "Components",
-      components: `../namics-ui/src/!(${allGrouped.join(
+      components: `../pulsar-ui/src/!(${allGrouped.join(
         "|"
       )})/*.{js,ts,jsx,tsx}`,
       sections: [
         {
           name: "Primitives",
-          components: `../namics-ui/src/{${primitives.join(",")}}/*.{js,ts,tsx}`
+          components: `../pulsar-ui/src/{${primitives.join(",")}}/*.{js,ts,tsx}`
         },
         {
           name: "Containers",
-          components: `../namics-ui/src/{${containers.join(",")}}/*.{js,ts,tsx}`
+          components: `../pulsar-ui/src/{${containers.join(",")}}/*.{js,ts,tsx}`
         }
       ]
     }

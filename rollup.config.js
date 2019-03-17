@@ -60,7 +60,7 @@ const getOutput = (umd, pkg) =>
         format: "umd",
         exports: "named",
         globals: {
-          "namics-ui": "NamicsUi",
+          "pulsar-ui": "PulsarUi",
           react: "React",
           "react-dom": "ReactDOM",
           "prop-types": "PropTypes"

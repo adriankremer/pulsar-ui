@@ -1,0 +1,38 @@
+{
+  "projectName": "pulsar-ui",
+  "projectOwner": "adriankremer",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "adriankremer",
+      "name": "Adrian Kremer",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/7591767?v=4",
+      "profile": "https://github.com/adriankremer",
+      "contributions": [
+        "code",
+        "test",
+        "ideas",
+        "review"
+      ]
+    },
+    {
+      "login": "zidizei",
+      "name": "Patrick Lam",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/470408?v=4",
+      "profile": "https://github.com/zidizei",
+      "contributions": [
+        "code",
+        "test",
+        "ideas",
+        "review"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}

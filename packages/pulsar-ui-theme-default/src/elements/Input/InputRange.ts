@@ -1,4 +1,4 @@
-import { css } from "namics-ui";
+import { css } from "pulsar-ui";
 import { palette as p, prop } from "styled-tools";
 
 const SliderThumb = css`

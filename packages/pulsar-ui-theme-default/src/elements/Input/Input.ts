@@ -1,4 +1,4 @@
-import { css } from "namics-ui";
+import { css } from "pulsar-ui";
 import InputRange from "./InputRange";
 import InputText from "./InputText";
 import InputCheckbox from "./InputCheckbox";

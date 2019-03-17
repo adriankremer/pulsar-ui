@@ -1,5 +1,5 @@
 {
-  "name": "@namics-ui/theme-blue",
+  "name": "@pulsar-ui/theme-blue",
   "version": "0.1.0",
   "description": "",
   "main": "build/index.js",
@@ -21,6 +21,6 @@
     "typescript": "3.2.4"
   },
   "dependencies": {
-    "namics-ui-theme-default": "^0.1.0"
+    "pulsar-ui-theme-default": "^0.1.0"
   }
 }
