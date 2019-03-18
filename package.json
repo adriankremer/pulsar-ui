@@ -10,6 +10,7 @@
   },
   "license": "MIT",
   "scripts": {
+    "changelog": "lerna-changelog",
     "contributors": "all-contributors generate",
     "test": "jest",
     "coverage": "npm test -- --coverage",
@@ -80,6 +81,7 @@
     "jest-dom": "3.1.1",
     "jest-styled-components": "6.3.1",
     "lerna": "3.10.7",
+    "lerna-changelog": "0.8.2",
     "lint-staged": "8.1.4",
     "lodash": "4.17.11",
     "prettier": "1.16.4",
