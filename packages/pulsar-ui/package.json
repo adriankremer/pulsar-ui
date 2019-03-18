@@ -1,6 +1,6 @@
 {
   "name": "@pulsar-ui/core",
-  "version": "0.2.2",
+  "version": "0.2.1",
   "description": "",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -17,11 +17,10 @@
     "start": "rollup -cw",
     "build": "rollup -c",
     "dev": "styleguidist server --open",
-    "preversion": "npm run lint && npm test && npm run build",
-    "postpublish": "npm run build:clean"
+    "preversion": "npm run lint && npm test && npm run build"
   },
   "repository": "adriankremer/pulsar-ui",
-  "author": "",
+  "author": "Adrian Kremer <a.kr3mer@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "@pulsar-ui/styleguide": "^0.1.2",
@@ -49,6 +48,9 @@
   "peerDependencies": {
     "react": "16.8.1",
     "react-dom": "16.8.1"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "gitHead": "e05658e103069576f23a33404c548e3ebb8b864e"
 }
