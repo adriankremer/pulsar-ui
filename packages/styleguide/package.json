@@ -1,5 +1,4 @@
 {
-  "name": "@pulsar-ui/styleguide",
   "version": "0.1.2",
   "description": "styleguide for pulsar-ui",
   "main": "index.js",
