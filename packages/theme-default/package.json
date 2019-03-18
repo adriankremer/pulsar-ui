@@ -24,5 +24,8 @@
   "dependencies": {
     "styled-tools": "1.7.1"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "gitHead": "e05658e103069576f23a33404c548e3ebb8b864e"
 }
