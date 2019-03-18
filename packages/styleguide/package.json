@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "styleguide for pulsar-ui",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "dev": "styleguidist server --open",
     "build": "styleguidist build"
