@@ -1,5 +1,5 @@
 {
-  "name": "pulsar-ui",
+  "name": "@pulsar-ui/core",
   "version": "0.1.0",
   "description": "",
   "main": "lib/index.js",
@@ -14,6 +14,7 @@
     "lint": "eslint src scripts --ext js,ts,tsx",
     "build:ts": "tsc --emitDeclarationOnly",
     "prebuild": "npm run build:ts",
+    "start": "rollup -cw",
     "build": "rollup -c",
     "dev": "styleguidist server --open",
     "preversion": "npm run lint && npm test && npm run build",

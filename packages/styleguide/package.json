@@ -4,15 +4,16 @@
   "description": "styleguide for pulsar-ui",
   "main": "index.js",
   "scripts": {
-    "dev": "styleguidist server --open"
+    "dev": "styleguidist server --open",
+    "build": "styleguidist build"
   },
   "author": "Adrian Kremer <a.kr3mer@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "@babel/polyfill": "7.2.5",
     "diffable-html": "4.0.0",
-    "pulsar-ui": "^0.1.0",
-    "pulsar-ui-theme-default": "^0.1.0",
+    "@pulsar-ui/core": "^0.1.0",
+    "@pulsar-ui/theme-default": "^0.1.0",
     "parse-prop-types": "0.3.0",
     "react-helmet": "5.2.0",
     "react-router-dom": "4.3.1",
