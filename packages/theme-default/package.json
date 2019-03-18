@@ -23,5 +23,6 @@
   },
   "dependencies": {
     "styled-tools": "1.7.1"
-  }
+  },
+  "gitHead": "9592c4cbd23659461b82a2bac744a25582af11db"
 }
