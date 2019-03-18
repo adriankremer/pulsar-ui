@@ -1,15 +1,16 @@
 import { css } from "@pulsar-ui/core";
-import { palette as p, theme } from "styled-tools";
 
-const InputText = css`
-  &:not([type="range"]):not([type="checkbox"]) {
-    border: 1px solid ${p("grayScale", 2)};
-    padding: ${theme("padding.top")} ${theme("padding.right")}
-      ${theme("padding.bottom")} ${theme("padding.left")};
-    border-radius: ${theme("border.radius")};
-    outline: none;
-    width: 100%;
-  }
-`;
+const InputText = props => {
+  const { palette, padding, border } = props.theme;
+  return css`
+    &:not([type="range"]):not([type="checkbox"]) {
+      border: 1px solid ${palette.grayScale[2]};
+      padding: ${padding.top} ${padding.right} ${padding.bottom} ${padding.left};
+      border-radius: ${border.radius};
+      outline: none;
+      width: 100%;
+    }
+  `;
+};
 
 export default InputText;
