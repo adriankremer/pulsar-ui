@@ -21,7 +21,7 @@
     "build:clean": "lerna exec --scope @pulsar-ui/* -- npm run build:clean",
     "website": "lerna exec --scope website -- npm run start",
     "website:build": "lerna exec --scope website -- npm run build",
-    "release": "lerna publish --access public",
+    "release": "lerna publish",
     "release:next": "npm run release -- --npm-tag=next --preid=beta"
   },
   "husky": {
