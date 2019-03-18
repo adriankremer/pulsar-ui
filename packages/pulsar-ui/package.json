@@ -27,6 +27,7 @@
     "@pulsar-ui/styleguide": "*",
     "@types/styled-components": "4.1.8",
     "eslint": "5.15.2",
+    "jest": "24.5.0",
     "react-docgen-typescript": "1.12.3",
     "react-styleguidist": "8.0.6",
     "rimraf": "2.6.3",
