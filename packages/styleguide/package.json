@@ -4,7 +4,8 @@
   "description": "styleguide for pulsar-ui",
   "main": "index.js",
   "scripts": {
-    "dev": "styleguidist server --open"
+    "dev": "styleguidist server --open",
+    "build": "styleguidist build"
   },
   "author": "Adrian Kremer <a.kr3mer@gmail.com>",
   "license": "ISC",
