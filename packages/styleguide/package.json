@@ -1,6 +1,6 @@
 {
   "name": "@pulsar-ui/styleguide",
-  "version": "0.1.5",
+  "version": "0.3.1",
   "description": "styleguide for pulsar-ui",
   "main": "index.js",
   "private": true,
@@ -12,8 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "@babel/polyfill": "7.2.5",
-    "@pulsar-ui/core": "^0.2.4",
-    "@pulsar-ui/theme-default": "^0.1.4",
+    "@pulsar-ui/core": "^0.3.1",
+    "@pulsar-ui/theme-default": "^0.3.1",
     "diffable-html": "4.0.0",
     "parse-prop-types": "0.3.0",
     "react-helmet": "5.2.0",

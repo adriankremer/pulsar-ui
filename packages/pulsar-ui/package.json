@@ -1,6 +1,6 @@
 {
   "name": "@pulsar-ui/core",
-  "version": "0.2.4",
+  "version": "0.3.1",
   "description": "",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -23,7 +23,7 @@
   "author": "Adrian Kremer <a.kr3mer@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "@pulsar-ui/styleguide": "^0.1.2",
+    "@pulsar-ui/styleguide": "^0.3.1",
     "@types/styled-components": "4.1.8",
     "eslint": "5.15.2",
     "jest": "24.5.0",
