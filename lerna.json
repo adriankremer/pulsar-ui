@@ -5,7 +5,7 @@
   "packages": [
     "packages/**/*"
   ],
-  "version": "independent",
+  "version": "0.3.0",
   "changelog": {
     "repo": "adriankremer/pulsar-ui",
     "labels": {
