@@ -1,5 +1,4 @@
 import { css } from "@pulsar-ui/core";
-import { palette as p, theme } from "styled-tools";
 
 const InputCheckbox = props => css`
   &[type="checkbox"] {
