@@ -1,4 +1,4 @@
-import { css } from "@pulsar-ui/core";
+import { css } from "@pulsar-ui/core/styled";
 
 const Avatar = css`
   border-radius: 100%;
