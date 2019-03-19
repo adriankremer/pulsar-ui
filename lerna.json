@@ -16,7 +16,8 @@
       "tag: documentation": ":memo: Documentation",
       "tag: internal": ":house: Internal",
       "tag: underlying tools": ":hammer: Underlying Tools"
-    }
+    },
+    "cacheDir": ".changelog"
   },
   "command": {
     "publish": {

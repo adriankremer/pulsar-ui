@@ -6,3 +6,4 @@ es
 dist
 ts
 *.log
+.changelog
