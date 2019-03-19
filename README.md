@@ -2,11 +2,12 @@
 
 Pulsar UI is just another UI library ¯\\_(ツ)_/¯ using CSS in JS to provide a highly reusable and themeable experience.
 
-[![Build Status][travis-image]][travis-url] [![License][license-image]][license-url]  
+[![Build Status][travis-image]][travis-url] [![License][license-image]][license-url]  [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
-## Installation
+
+## Usage
 ```sh
-npm i pulsar-ui
+yarn || npm i
 ```
 
 ### License

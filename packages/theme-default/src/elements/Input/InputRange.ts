@@ -1,24 +1,23 @@
 import { css } from "@pulsar-ui/core";
-import { palette as p, prop } from "styled-tools";
 
-const SliderThumb = css`
+const sliderThumb = props => css`
   height: 16px;
   width: 16px;
   border-radius: 16px;
-  background: ${p("primary", 1)};
+  background: ${props.theme.palette.primary[1]};
   cursor: pointer;
   margin-top: -4px;
 `;
 
-const SliderTrack = css`
+const sliderTrack = props => css`
   width: 100%;
   height: 8px;
   cursor: pointer;
   border-radius: 8px;
-  background: ${p("grayScale", 1)};
+  background: ${props.theme.palette.grayScale[1]};
 `;
 
-const StepIndicator = css`
+const stepIndicator = props => css`
   position: relative;
   &:before {
     content: "";
@@ -26,7 +25,7 @@ const StepIndicator = css`
     width: 1px;
     position: absolute;
     top: calc(100% + 8px);
-    background-color: ${p("grayScale", 2)};
+    background-color: ${props.theme.palette.grayScale[2]};
     right: 8px;
   }
   &:after {
@@ -35,10 +34,10 @@ const StepIndicator = css`
     top: calc(100% + 8px);
     background-image: linear-gradient(
       90deg,
-      ${p("grayScale", 2)} 1px,
+      ${props.theme.palette.grayScale[2]} 1px,
       transparent 1px
     );
-    background-size: ${prop("step")}%;
+    background-size: ${props.step}%;
     left: 0;
     right: 0;
     height: 8px;
@@ -47,9 +46,9 @@ const StepIndicator = css`
   }
 `;
 
-const InputRange = css`
+const InputRange = props => css`
   &[type="range"] {
-    ${StepIndicator}
+    ${stepIndicator(props)};
     -webkit-appearance: none;
     margin: 18px 0;
     width: 100%;
@@ -57,30 +56,30 @@ const InputRange = css`
       outline: none;
     }
     &::-webkit-slider-thumb {
-      ${SliderThumb}
+      ${sliderThumb(props)};
       -webkit-appearance: none;
     }
     &::-webkit-slider-runnable-track {
-      ${SliderTrack}
+      ${sliderTrack(props)};
     }
     &::-moz-range-thumb {
-      ${SliderThumb}
+      ${sliderThumb(props)};
     }
     &::-moz-range-track {
-      ${SliderTrack}
+      ${sliderTrack(props)};
     }
     &::-ms-thumb {
-      ${SliderThumb}
+      ${sliderThumb(props)};
     }
     &::-ms-track {
-      ${SliderTrack}
+      ${sliderTrack(props)};
       color: transparent;
     }
     &::-ms-fill-lower {
-      ${SliderTrack}
+      ${sliderTrack(props)};
     }
     &::-ms-fill-upper {
-      ${SliderTrack}
+      ${sliderTrack(props)};
     }
   }
 `;

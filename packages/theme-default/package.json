@@ -10,6 +10,7 @@
     "prebuild": "tsc --emitDeclarationOnly",
     "start": "rollup -cw",
     "build": "rollup -c",
+    "type-check": "tsc --noEmit",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

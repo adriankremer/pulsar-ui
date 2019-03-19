@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "dev": "styleguidist server --open",
+    "start": "styleguidist server --open",
     "build": "styleguidist build"
   },
   "author": "Adrian Kremer <a.kr3mer@gmail.com>",

@@ -10,12 +10,13 @@
   },
   "license": "MIT",
   "scripts": {
+    "commit": "git-cz",
     "changelog": "lerna-changelog",
     "contributors": "all-contributors generate",
     "test": "jest",
     "coverage": "npm test -- --coverage",
     "postcoverage": "opn coverage/lcov-report/index.html",
-    "type-check": "tsc --noEmit",
+    "type-check": "lerna run type-check",
     "lint": "eslint . --ext js,ts,tsx",
     "dev": "lerna exec --scope @pulsar-ui/core -- npm run dev",
     "build": "lerna exec --scope @pulsar-ui/* --concurrency 1 -- npm run build",
@@ -38,7 +39,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "cz-conventional-changelog"
     }
   },
   "devDependencies": {
