@@ -2,15 +2,15 @@ language: node_js
 node_js:
   - v8
 script:
+  - yarn lerna bootstrap
   - yarn lint
   - yarn type-check
   - yarn test --coverage
   - yarn build
 cache:
   - yarn
-  - yarn lerna bootstrap
 before_install:
-  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.9.4
+  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.15.2
   - export PATH=$HOME/.yarn/bin:$PATH
 after_success:
   - bash <(curl -s https://codecov.io/bash)
