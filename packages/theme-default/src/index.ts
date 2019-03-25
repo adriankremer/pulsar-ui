@@ -1,4 +1,5 @@
 import Elements from "./elements";
+import Global from "./global";
 
 const white = "#FFFDFD";
 const black = "#2B2B2B";
@@ -31,5 +32,6 @@ export default {
   palette,
   padding,
   border,
-  ...Elements
+  ...Elements,
+  Global
 };

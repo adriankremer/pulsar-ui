@@ -9,3 +9,6 @@ export * from "./Input";
 
 export { default as Avatar } from "./Avatar";
 export * from "./Avatar";
+
+export { default as Grid } from "./Grid";
+export * from "./Grid";
