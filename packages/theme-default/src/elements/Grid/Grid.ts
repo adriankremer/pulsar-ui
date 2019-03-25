@@ -1,20 +1,20 @@
 import { css } from "@pulsar-ui/core/styled";
 
 export const Cell = props => {
-  const { xs, sm, md, lg, xl } = props.theme.breakpoints;
+  const { sm, md, lg, xl } = props.theme.breakpoints;
   return css`
     grid-column-end: span ${props.xs || 1};
     grid-row-end: span ${props.height || 1};
-    @media screen and (min-width: ${xs}) {
+    @media screen and (min-width: ${sm}) {
       grid-column-end: span ${props.sm};
     }
-    @media screen and (min-width: ${sm}) {
+    @media screen and (min-width: ${md}) {
       grid-column-end: span ${props.md};
     }
-    @media screen and (min-width: ${md}) {
+    @media screen and (min-width: ${lg}) {
       grid-column-end: span ${props.lg};
     }
-    @media screen and (min-width: ${lg}) {
+    @media screen and (min-width: ${xl}) {
       grid-column-end: span ${props.xl};
     }
   `;

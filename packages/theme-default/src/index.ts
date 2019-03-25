@@ -27,11 +27,10 @@ const padding = {
 };
 
 const breakpoints = {
-  xs: "480px",
-  sm: "768px",
-  md: "1024px",
-  lg: "1200px",
-  xl: "1400px"
+  sm: "480px",
+  md: "768px",
+  lg: "1024px",
+  xl: "1200px"
 };
 
 const border = {
