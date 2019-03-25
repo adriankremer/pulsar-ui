@@ -17,6 +17,7 @@
   "license": "ISC",
   "devDependencies": {
     "rollup": "1.2.2",
+    "rollup-plugin-copy-assets": "1.1.0",
     "typescript": "3.2.4"
   },
   "peerDependencies": {

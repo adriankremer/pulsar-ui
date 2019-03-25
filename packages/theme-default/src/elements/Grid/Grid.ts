@@ -7,6 +7,7 @@ export const Cell = props => css`
 
 const Grid = props => css`
   display: grid;
+  grid-template-columns: repeat(12, 1fr);
   ${props.fill &&
     css`
       grid-template-columns: repeat(auto-fill, ${props.fill});
