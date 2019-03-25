@@ -3,7 +3,11 @@ import Box, { BoxProps } from "../Box";
 import styled from "../styled";
 
 interface CellProps extends BoxProps {
-  width: number;
+  xs: number;
+  sm: number;
+  md: number;
+  lg: number;
+  xl: number;
   height: number;
 }
 

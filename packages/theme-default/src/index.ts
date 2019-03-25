@@ -17,11 +17,21 @@ const palette = {
   secondaryText: [black, black, white, white, white]
 };
 
+const spacing = [".3rem", ".5rem", ".8rem"];
+
 const padding = {
-  top: ".5rem",
-  right: ".5rem",
-  bottom: ".5rem",
-  left: ".5rem"
+  top: spacing[1],
+  right: spacing[1],
+  bottom: spacing[1],
+  left: spacing[1]
+};
+
+const breakpoints = {
+  xs: "480px",
+  sm: "768px",
+  md: "1024px",
+  lg: "1200px",
+  xl: "1400px"
 };
 
 const border = {
@@ -31,6 +41,8 @@ const border = {
 export default {
   palette,
   padding,
+  spacing,
+  breakpoints,
   border,
   ...Elements,
   Global
