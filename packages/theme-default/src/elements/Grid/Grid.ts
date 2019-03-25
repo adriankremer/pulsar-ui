@@ -1,4 +1,4 @@
-import { css } from "@pulsar-ui/core/styled";
+import { css } from "@pulsar-ui/core";
 
 export const Cell = props => {
   const { sm, md, lg, xl } = props.theme.breakpoints;

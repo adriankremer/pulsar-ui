@@ -1,4 +1,4 @@
-import { css } from "@pulsar-ui/core/styled";
+import { css } from "@pulsar-ui/core";
 const Montserrat300Italic = require("./fonts/montserrat-v12-latin-300italic.woff");
 const Montserrat300 = require("./fonts/montserrat-v12-latin-300.woff");
 const Montserrat400 = require("./fonts/montserrat-v12-latin-regular.woff");

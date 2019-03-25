@@ -2,7 +2,6 @@ language: node_js
 node_js:
   - v8
 script:
-  - yarn lerna bootstrap
   - yarn lint
   - yarn type-check
   - yarn test --coverage
