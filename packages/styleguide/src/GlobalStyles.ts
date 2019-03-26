@@ -1,10 +1,10 @@
 import { css } from "@pulsar-ui/core";
-const Montserrat300Italic = require("./fonts/montserrat-v12-latin-300italic.woff");
-const Montserrat300 = require("./fonts/montserrat-v12-latin-300.woff");
-const Montserrat400 = require("./fonts/montserrat-v12-latin-regular.woff");
-const Montserrat400Italic = require("./fonts/montserrat-v12-latin-italic.woff");
-const Montserrat800 = require("./fonts/montserrat-v12-latin-800.woff");
-const Montserrat800Italic = require("./fonts/montserrat-v12-latin-800italic.woff");
+import Montserrat300Italic from "./fonts/montserrat-v12-latin-300italic.woff";
+import Montserrat300 from "./fonts/montserrat-v12-latin-300.woff";
+import Montserrat400 from "./fonts/montserrat-v12-latin-regular.woff";
+import Montserrat400Italic from "./fonts/montserrat-v12-latin-italic.woff";
+import Montserrat800 from "./fonts/montserrat-v12-latin-800.woff";
+import Montserrat800Italic from "./fonts/montserrat-v12-latin-800italic.woff";
 
 const global = css`
   body {
