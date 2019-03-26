@@ -9,7 +9,7 @@ const {
 } = require("@pulsar-ui/styleguide/styleguide.config");
 
 module.exports = {
-  title: "StyleGuide. Namics.",
+  title: "Pulsar UI",
   components: "src/[A-Z]*/*.{js,ts,jsx,tsx}",
   propsParser: require("react-docgen-typescript").withDefaultConfig().parse,
   ignore,

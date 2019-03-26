@@ -1,6 +1,6 @@
 import Elements from "./elements";
 
-const white = "#FFFDFD";
+const white = "#FFFFFF";
 const black = "#2B2B2B";
 
 const palette = {
@@ -16,20 +16,38 @@ const palette = {
   secondaryText: [black, black, white, white, white]
 };
 
+const spacing = [".3rem", ".5rem", ".8rem"];
+
 const padding = {
-  top: ".5rem",
-  right: ".5rem",
-  bottom: ".5rem",
-  left: ".5rem"
+  top: spacing[1],
+  right: spacing[1],
+  bottom: spacing[1],
+  left: spacing[1]
+};
+
+const breakpoints = {
+  sm: "480px",
+  md: "768px",
+  lg: "1024px",
+  xl: "1200px"
 };
 
 const border = {
   radius: "3px"
 };
 
+const boxShadow = `
+  0px 1px 3px 0px rgba(0,0,0,0.2),
+  0px 1px 1px 0px rgba(0,0,0,0.14),
+  0px 2px 1px -1px rgba(0,0,0,0.12)
+`;
+
 export default {
   palette,
   padding,
+  spacing,
+  boxShadow,
+  breakpoints,
   border,
   ...Elements
 };
