@@ -1,7 +1,7 @@
 import use from "reuse";
 import { theme, prop, ifProp } from "styled-tools";
 import Box, { BoxProps } from "../Box";
-import styled, { css } from "../styled";
+import styled from "../styled";
 
 export interface CellProps extends BoxProps {
   sm?: number;
