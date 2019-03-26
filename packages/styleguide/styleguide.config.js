@@ -53,7 +53,7 @@ const webpackDevConfig = {
 };
 
 module.exports = {
-  title: "UI. Namics.",
+  title: "Pulsar UI",
   ignore: ["**/index.{js,jsx,ts,tsx}"],
   pagePerSection: true,
   webpackConfig:
