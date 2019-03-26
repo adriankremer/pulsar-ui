@@ -1,6 +1,6 @@
 import Elements from "./elements";
 
-const white = "#FFFDFD";
+const white = "#FFFFFF";
 const black = "#2B2B2B";
 
 const palette = {
@@ -36,10 +36,17 @@ const border = {
   radius: "3px"
 };
 
+const boxShadow = `
+  0px 1px 3px 0px rgba(0,0,0,0.2),
+  0px 1px 1px 0px rgba(0,0,0,0.14),
+  0px 2px 1px -1px rgba(0,0,0,0.12)
+`;
+
 export default {
   palette,
   padding,
   spacing,
+  boxShadow,
   breakpoints,
   border,
   ...Elements
