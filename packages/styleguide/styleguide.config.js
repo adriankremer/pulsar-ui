@@ -54,7 +54,6 @@ const webpackDevConfig = {
 
 module.exports = {
   title: "Pulsar UI",
-  ignore: ["**/index.{js,jsx,ts,tsx}"],
   pagePerSection: true,
   webpackConfig:
     process.env.NODE_ENV === "development"

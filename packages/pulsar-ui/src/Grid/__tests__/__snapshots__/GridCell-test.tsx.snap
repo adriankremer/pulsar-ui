@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`styles 1`] = `
+.emotion-0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  grid-column-end: span 12;
+  grid-row-end: span 1;
+}
+
+.emotion-0:focus:not(:focus-visible) {
+  outline: none;
+}
+
+<div
+  class="emotion-0"
+/>
+`;
