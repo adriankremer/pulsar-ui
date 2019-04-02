@@ -16,17 +16,17 @@ const GridCell = styled(Box)<CellProps>`
   grid-column-end: span ${prop("width", "12")};
   grid-row-end: span ${prop("height", "1")};
 
-  @media screen and (min-width: ${theme("breakpoints.sm", "480px")}) {
-    ${ifProp("sm", `grid-column-end: span ${prop("sm")};`)}
+  @media screen and (min-width: ${theme("breakpoints.sm", "768px")}) {
+    grid-column-end: span ${ifProp("sm", prop("sm"), prop("width"))};
   }
   @media screen and (min-width: ${theme("breakpoints.md", "768px")}) {
-    ${ifProp("md", `grid-column-end: span ${prop("md")};`)}
+    grid-column-end: span ${ifProp("md", prop("md"), prop("width"))};
   }
   @media screen and (min-width: ${theme("breakpoints.lg", "1024px")}) {
-    ${ifProp("lg", `grid-column-end: span ${prop("lg")};`)}
+    grid-column-end: span ${ifProp("lg", prop("lg"), prop("width"))};
   }
   @media screen and (min-width: ${theme("breakpoints.xl", "1200px")}) {
-    ${ifProp("xl", `grid-column-end: span ${prop("xl")};`)}
+    grid-column-end: span ${ifProp("xl", prop("xl"), prop("width"))};
   }
   ${theme("GridCell")}
 `;
