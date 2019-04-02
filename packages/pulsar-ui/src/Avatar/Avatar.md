@@ -1,5 +1,5 @@
 Avatar example:
 
-```js
+```jsx
 <Avatar src="https://placekitten.com/100/100" />
 ```
