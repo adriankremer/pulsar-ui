@@ -12,3 +12,6 @@ export * from "./Avatar";
 
 export { default as Grid } from "./Grid";
 export * from "./Grid";
+
+export { default as Toolbar } from "./Toolbar";
+export * from "./Toolbar";
