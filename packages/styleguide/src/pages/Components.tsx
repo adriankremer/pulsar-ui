@@ -8,7 +8,7 @@ export const Components = () => {
       <h1>Components</h1>
       <StyleguideConsumer>
         {({ styleguidist }: { styleguidist: any }) =>
-          styleguidist.sections[0].components.map(component => (
+          styleguidist.sections[0].components.map((component: any) => (
             <p>{component.name}</p>
           ))
         }

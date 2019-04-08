@@ -1,5 +1,5 @@
 import { css } from "@pulsar-ui/core";
 
-const Toolbar = props => css``;
+const Toolbar = css``;
 
 export default Toolbar;
