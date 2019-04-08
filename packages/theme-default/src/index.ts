@@ -10,7 +10,7 @@ const palette = {
   blackText: white,
   grayScale: ["#FFFFFB", "#E5E5E2", "#BFBFBC", "#7F7F7E", "#40403F"],
   grayScaleText: [black, black, black, white, white],
-  primary: ["#3CFFB5", "#36E5A3", "#2DBF88", "#1E7F5A", "#0F402D"],
+  primary: ["#00E7FF", "#2FD1FF", "#00A1FF", "#007FFF", "#0057AD"],
   primaryText: [black, black, white, white, white],
   secondary: ["#DFBBFF", "#C9A8E5", "#A78CBF", "#705D7F", "#382F40"],
   secondaryText: [black, black, white, white, white]

@@ -1,5 +1,5 @@
 Button example:
 
-```js
+```jsx
 <Button>Pizza 🍕</Button>
 ```

@@ -1,6 +1,4 @@
-const template = require("./template");
 const {
-  ignore,
   webpackConfig,
   logger,
   compilerConfig,
@@ -9,15 +7,13 @@ const {
 } = require("@pulsar-ui/styleguide/styleguide.config");
 
 module.exports = {
-  title: "Pulsar UI",
-  components: "src/[A-Z]*/*.{js,ts,jsx,tsx}",
-  propsParser: require("react-docgen-typescript").withDefaultConfig().parse,
-  ignore,
+  title: "Dev Styleguide",
+  serverPort: 6061,
   pagePerSection: true,
-  template,
+  components: "src/[A-Z]*/!(index).{js,ts,jsx,tsx}",
   webpackConfig,
+  skipComponentsWithoutExample,
   logger,
   compilerConfig,
-  skipComponentsWithoutExample,
   updateExample
 };

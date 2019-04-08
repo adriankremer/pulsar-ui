@@ -1,4 +1,6 @@
 ```js
+import Grid from "@pulsar-ui/core/Grid";
+import Avatar from "@pulsar-ui/core/Avatar";
 <Grid>
   <Grid.Cell width={6} height={4}>
     <Avatar width="100%" src="https://placekitten.com/400/400" />

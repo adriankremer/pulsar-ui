@@ -1,10 +1,11 @@
 const path = require("path");
 const fs = require("fs");
 const webpack = require("webpack");
+const importToRequire = require("./src/utils/importToRequire");
 // const template = require("./src/template");
 
 const primitives = ["Box"];
-const containers = [];
+const containers = ["Grid", "Box"];
 const allGrouped = [...primitives, ...containers];
 
 const webpackCommonConfig = {
@@ -30,7 +31,9 @@ const webpackCommonConfig = {
     ]
   },
   resolve: {
-    alias: { "pulsar-ui": path.join(__dirname, "../pulsar-ui/src") },
+    alias: {
+      "@pulsar-ui/core": path.join(__dirname, "../pulsar-ui/src")
+    },
     extensions: [".ts", ".tsx", ".jsx", ".js"]
   }
 };
@@ -51,7 +54,6 @@ const webpackDevConfig = {
     new webpack.NamedModulesPlugin()
   ]
 };
-
 module.exports = {
   title: "Pulsar UI",
   pagePerSection: true,
@@ -68,16 +70,22 @@ module.exports = {
       uses
     };
   },
+  updateExample(props) {
+    return {
+      ...props,
+      content: importToRequire(props.content)
+    };
+  },
   logger: {
     warn: () => {}
   },
   // template,
   styleguideDir: "dist",
-  styleguideComponents: {
-    Wrapper: path.join(__dirname, "src/Wrapper")
-  },
   context: {
     defaultTheme: "@pulsar-ui/theme-default"
+  },
+  styleguideComponents: {
+    StyleGuide: path.join(__dirname, "src")
   },
   compilerConfig: {
     transforms: {
@@ -91,15 +99,22 @@ module.exports = {
       name: "Components",
       components: `../pulsar-ui/src/!(${allGrouped.join(
         "|"
-      )})/*.{js,ts,jsx,tsx}`,
+      )})/index.{js,ts,jsx,tsx}`,
+      sectionDepth: 1,
       sections: [
         {
           name: "Primitives",
-          components: `../pulsar-ui/src/{${primitives.join(",")}}/*.{js,ts,tsx}`
+          components: `../pulsar-ui/src/{${primitives.join(
+            ","
+          )}}/*.{js,ts,tsx}`,
+          sectionDepth: 1
         },
         {
           name: "Containers",
-          components: `../pulsar-ui/src/{${containers.join(",")}}/*.{js,ts,tsx}`
+          components: `../pulsar-ui/src/{${containers.join(
+            ","
+          )}}/index.{js,ts,tsx}`,
+          sectionDepth: 1
         }
       ]
     }

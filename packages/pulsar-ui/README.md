@@ -1,6 +1,6 @@
 # @pulsar-ui/core
 
-Pulsar UI is just another UI library ¯\\_(ツ)_/¯ using CSS in JS to provide a highly reusable and themeable experience.
+Pulsar UI is just another UI library ¯\\_(ツ)_/¯ using [Emotion](https://emotion.sh/docs/introduction) (fast, common CSS in JS) and [Reuse](https://github.com/diegohaz/reuse) to provide a powerful and themeable component composition. 
 
 [![Build Status][travis-image]][travis-url] [![License][license-image]][license-url]  
 
