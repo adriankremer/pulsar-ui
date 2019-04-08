@@ -31,7 +31,9 @@ const webpackCommonConfig = {
     ]
   },
   resolve: {
-    alias: { "pulsar-ui": path.join(__dirname, "../pulsar-ui/src") },
+    alias: {
+      "@pulsar-ui/core": path.join(__dirname, "../pulsar-ui/src")
+    },
     extensions: [".ts", ".tsx", ".jsx", ".js"]
   }
 };
@@ -98,19 +100,23 @@ module.exports = {
       components: `../pulsar-ui/src/!(${allGrouped.join(
         "|"
       )})/index.{js,ts,jsx,tsx}`,
-      sectionDepth: 1
-    },
-    {
-      name: "Primitives",
-      components: `../pulsar-ui/src/{${primitives.join(",")}}/*.{js,ts,tsx}`,
-      sectionDepth: 1
-    },
-    {
-      name: "Containers",
-      components: `../pulsar-ui/src/{${containers.join(
-        ","
-      )}}/index.{js,ts,tsx}`,
-      sectionDepth: 1
+      sectionDepth: 1,
+      sections: [
+        {
+          name: "Primitives",
+          components: `../pulsar-ui/src/{${primitives.join(
+            ","
+          )}}/*.{js,ts,tsx}`,
+          sectionDepth: 1
+        },
+        {
+          name: "Containers",
+          components: `../pulsar-ui/src/{${containers.join(
+            ","
+          )}}/index.{js,ts,tsx}`,
+          sectionDepth: 1
+        }
+      ]
     }
   ]
 };

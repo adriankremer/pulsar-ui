@@ -1,6 +1,6 @@
 import React from "react";
 import { styled } from "@pulsar-ui/core";
-import Box, { BoxProps } from "@pulsar-ui/core/src/Box";
+import Box, { BoxProps } from "@pulsar-ui/core/Box";
 import Header from "../components/Header";
 
 interface Container extends BoxProps {}

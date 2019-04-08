@@ -4,7 +4,7 @@ import Box, { BoxProps } from "../Box";
 import styled from "../styled";
 
 export interface ToolbarContentProps extends BoxProps {
-  position: "start" | "center" | "end";
+  position?: "start" | "center" | "end";
 }
 
 const ToolbarContent = styled(Box)<ToolbarContentProps>`
@@ -12,6 +12,9 @@ const ToolbarContent = styled(Box)<ToolbarContentProps>`
   grid-area: ${prop("position")};
   justify-content: ${prop("position")};
   align-items: center;
+  grid-auto-flow: column;
+  grid-auto-columns: min-content;
+  grid-gap: inherit;
 `;
 
 export default use(ToolbarContent, "div");

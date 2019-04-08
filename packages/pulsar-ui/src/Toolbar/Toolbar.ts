@@ -1,10 +1,10 @@
 import use from "reuse";
-import { prop } from "styled-tools";
+import { prop, theme } from "styled-tools";
 import styled from "../styled";
 import Box, { BoxProps } from "../Box";
 
 export interface ToolbarProps extends BoxProps {
-  gutter: string;
+  gutter?: string;
 }
 
 const Toolbar = styled(Box)<ToolbarProps>`
@@ -14,6 +14,8 @@ const Toolbar = styled(Box)<ToolbarProps>`
     "start center end"
     / 1fr auto 1fr;
   padding: ${prop("gutter")};
+
+  ${theme("Toolbar")};
 `;
 
 export default use(Toolbar, "div");
