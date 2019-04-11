@@ -1,0 +1,24 @@
+{
+  "name": "@pulsar-ui/system-default",
+  "version": "0.3.1",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "unpkg": "dist/pulsar-ui-system-default.min.js",
+  "types": "ts",
+  "author": "Adrian Kremer <a.kr3mer@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "dependencies": {
+    "@pulsar-ui/core": "^0.3.1",
+    "emotion": "10.0.9"
+  },
+  "devDependencies": {
+    "rollup-plugin-proxy-directories": "1.2.0"
+  },
+  "peerDependencies": {
+    "react": "16.8.6",
+    "react-dom": "16.8.6"
+  }
+}
