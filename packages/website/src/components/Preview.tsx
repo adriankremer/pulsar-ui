@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useCallback } from "react";
 import ReactDom, { unmountComponentAtNode } from "react-dom";
 import { transform } from "buble";
+import { Provider } from "@pulsar-ui/core";
+import * as system from "@pulsar-ui/system-default";
 import { ErrorBoundary } from "../utils/ErrorBoundary";
 
 type PreviewProps = {
@@ -71,7 +73,10 @@ export const Preview = ({ code }: PreviewProps) => {
       try {
         const renderedExample = compileCode(code);
         unmount();
-        ReactDom.render(renderedExample, wrapperRef.current);
+        ReactDom.render(
+          <Provider system={system}>{renderedExample}</Provider>,
+          wrapperRef.current
+        );
       } catch (e) {
         unmount();
         handleError(e);

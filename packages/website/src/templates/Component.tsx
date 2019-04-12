@@ -1,6 +1,8 @@
 import React from "react";
 import { graphql } from "gatsby";
 import RehypeReact from "rehype-react";
+import { Provider } from "@pulsar-ui/core";
+import * as system from "@pulsar-ui/system-default";
 import "codemirror/lib/codemirror.css";
 import "codemirror/theme/dracula.css";
 import { Editor, useEditorState } from "../components/Editor";
@@ -52,7 +54,7 @@ const { Compiler: renderAst } = new RehypeReact({
 
 const Component = ({ data }: ComponentProps) => {
   const { htmlAst } = data.markdownRemark;
-  return renderAst(htmlAst);
+  return <Provider system={system}>{renderAst(htmlAst)}</Provider>;
 };
 
 export const pageQuery = graphql`
