@@ -20,8 +20,7 @@ export function createComponent<T extends As, O>({
 }: Options<T, O>) {
   const component = ({ as = type, ...props }, ref: React.Ref<any>) => {
     if (useHook) {
-      const elementProps = useHook(undefined, props);
-      console.log(elementProps);
+      const elementProps = useHook(undefined, { ref, ...props });
       return useCreateElement(as, elementProps);
     }
     return useCreateElement(as, props);
