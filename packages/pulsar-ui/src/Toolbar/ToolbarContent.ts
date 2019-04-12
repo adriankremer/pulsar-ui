@@ -1,20 +1,28 @@
-import use from "reuse";
-import { prop } from "styled-tools";
-import Box, { BoxProps } from "../Box";
-import styled from "../styled";
+import { createComponent } from "../utils/createComponent";
+import { useProps } from "../System/useProps";
 
-export interface ToolbarContentProps extends BoxProps {
-  position?: "start" | "center" | "end";
+export function useToolbarContent({ ...options }) {
+  let htmlProps = useProps("useButton", options);
+
+  htmlProps = {
+    ...htmlProps,
+    ...{
+      style: {
+        display: "grid",
+        gridArea: "start",
+        justifyContent: "start",
+        alignItems: "center",
+        gridAutoFlow: "column",
+        gridAutoColumns: "min-content",
+        gridGap: "inherit"
+      }
+    }
+  };
+
+  return htmlProps;
 }
 
-const ToolbarContent = styled(Box)<ToolbarContentProps>`
-  display: grid;
-  grid-area: ${prop("position")};
-  justify-content: ${prop("position")};
-  align-items: center;
-  grid-auto-flow: column;
-  grid-auto-columns: min-content;
-  grid-gap: inherit;
-`;
-
-export default use(ToolbarContent, "div");
+export const ToolbarContent = createComponent({
+  as: "div",
+  useHook: useToolbarContent
+});

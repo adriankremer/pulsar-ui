@@ -1,0 +1,7 @@
+{
+  "name": "@pulsar-ui/core/utils/types",
+  "private": true,
+  "main": "../../lib/utils/types",
+  "module": "../../es/utils/types",
+  "types": "../../ts/utils/types"
+}

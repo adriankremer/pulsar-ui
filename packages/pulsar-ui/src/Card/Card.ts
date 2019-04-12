@@ -1,8 +1,12 @@
-import styled from "../styled";
-import Box, { BoxProps } from "../Box";
+import { createComponent } from "../utils/createComponent";
+import { useProps } from "../System/useProps";
 
-interface CardProps extends BoxProps {}
+export function useCard({ ...options }) {
+  const htmlProps = useProps("useButton", options);
+  return htmlProps;
+}
 
-const Card = styled(Box)<CardProps>(props => props.theme.Card);
-
-export default Card;
+export const Card = createComponent({
+  as: "div",
+  useHook: useCard
+});

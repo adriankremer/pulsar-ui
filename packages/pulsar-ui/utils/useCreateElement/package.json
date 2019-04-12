@@ -1,0 +1,7 @@
+{
+  "name": "@pulsar-ui/core/utils/useCreateElement",
+  "private": true,
+  "main": "../../lib/utils/useCreateElement",
+  "module": "../../es/utils/useCreateElement",
+  "types": "../../ts/utils/useCreateElement"
+}

@@ -1,12 +1,23 @@
-import use from "reuse";
-import { theme } from "styled-tools";
-import styled from "../styled";
-import Box, { BoxProps } from "../Box";
+import { createComponent } from "../utils/createComponent";
+import { useProps } from "../System/useProps";
 
-export interface IButtonProps extends BoxProps {}
+type ButtonProps = React.ButtonHTMLAttributes<any>;
 
-const Button = styled(Box)<IButtonProps>`
-  ${theme("Button")}
-`;
+export function useButton({ ...options }, htmlProps: ButtonProps) {
+  htmlProps = useProps("useButton", options, htmlProps);
 
-export default use(Button, "button");
+  htmlProps = {
+    ...htmlProps,
+    ...{
+      style: {
+        backgroundColor: htmlProps.color
+      }
+    }
+  };
+  return htmlProps;
+}
+
+export const Button = createComponent({
+  as: "button",
+  useHook: useButton
+});

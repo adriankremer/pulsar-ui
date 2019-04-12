@@ -1,9 +1,13 @@
-import use from "reuse";
-import styled from "../styled";
-import Box, { BoxProps } from "../Box";
+import { createComponent } from "../utils/createComponent";
+import { useProps } from "../System/useProps";
 
-export interface IInputProps extends BoxProps {}
+export function useInput({ ...options }) {
+  const htmlProps = useProps("useButton", options);
 
-const Input = styled(Box)<IInputProps>(props => props.theme.Input);
+  return htmlProps;
+}
 
-export default use(Input, "input");
+export const Input = createComponent({
+  as: "input",
+  useHook: useInput
+});
