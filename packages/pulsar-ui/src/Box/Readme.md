@@ -3,10 +3,16 @@ title: "Box"
 path: "/components/box"
 ---
 
-```js
-<Box>Pizza 🍕</Box>
-```
+# Box
 
-```js
-<Box use="span">Pizza 🍕</Box>
+```jsx
+import { Box } from "@pulsar-ui/core";
+
+function Example() {
+  return (
+    <>
+      <Box system={{palette: "white"}}>Pizza 🍕</Box>
+    </>
+  );
+}
 ```
