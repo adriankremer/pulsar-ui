@@ -1,5 +1,5 @@
 {
-  "name": "@pulsar-ui/system-default",
+  "name": "@pulsar-ui/system",
   "version": "0.3.1",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -13,17 +13,18 @@
     "build": "rollup -c"
   },
   "dependencies": {
+    "@pulsar-ui/palette": "^0.3.1",
     "emotion": "10.0.9"
   },
   "devDependencies": {
+    "@pulsar-ui/core": "^0.3.1",
     "react": "16.8.1",
     "react-dom": "16.8.1",
-    "@pulsar-ui/core": "^0.3.1",
     "rollup-plugin-proxy-directories": "1.2.0"
   },
   "peerDependencies": {
+    "@pulsar-ui/core": "^0.3.1",
     "react": "16.8.1",
-    "react-dom": "16.8.1",
-    "@pulsar-ui/core": "^0.3.1"
+    "react-dom": "16.8.1"
   }
 }
