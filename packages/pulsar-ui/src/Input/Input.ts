@@ -1,9 +1,10 @@
 import { createComponent } from "../utils/createComponent";
 import { useProps } from "../System/useProps";
 
-export function useInput({ ...options }) {
-  const htmlProps = useProps("useButton", options);
+export type InputProps = React.InputHTMLAttributes<any>;
 
+export function useInput({ ...options }, htmlProps: InputProps) {
+  htmlProps = useProps("useInput", options, htmlProps);
   return htmlProps;
 }
 

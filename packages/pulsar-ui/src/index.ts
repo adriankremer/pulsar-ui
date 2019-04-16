@@ -6,3 +6,5 @@ export * from "./Avatar";
 export * from "./Grid";
 export * from "./Toolbar";
 export * from "./System";
+export * from "./Paper";
+export * from "./Tabbable";
