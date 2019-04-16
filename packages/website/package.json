@@ -5,8 +5,11 @@
   "version": "0.1.0",
   "author": "Adrian Kremer <a.kr3mer@gmail.com>",
   "dependencies": {
+    "@emotion/core": "10.0.10",
+    "@emotion/styled": "10.0.10",
     "@pulsar-ui/core": "^0.3.1",
-    "@pulsar-ui/system-default": "^0.3.1",
+    "@pulsar-ui/palette": "^0.3.1",
+    "@pulsar-ui/system": "^0.3.1",
     "buble": "0.19.7",
     "codemirror": "5.45.0",
     "gatsby": "^2.3.15",

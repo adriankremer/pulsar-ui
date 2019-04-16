@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import RehypeReact from "rehype-react";
 import { Provider } from "@pulsar-ui/core";
-import * as system from "@pulsar-ui/system-default";
+import * as system from "@pulsar-ui/system";
 import "codemirror/lib/codemirror.css";
 import "codemirror/theme/dracula.css";
 import { Editor, useEditorState } from "../components/Editor";

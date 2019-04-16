@@ -2,7 +2,8 @@ import React, { useState, useEffect, useCallback } from "react";
 import ReactDom, { unmountComponentAtNode } from "react-dom";
 import { transform } from "buble";
 import { Provider } from "@pulsar-ui/core";
-import * as system from "@pulsar-ui/system-default";
+import * as system from "@pulsar-ui/system";
+import styled from "@emotion/styled";
 import { ErrorBoundary } from "../utils/ErrorBoundary";
 
 type PreviewProps = {
@@ -18,19 +19,17 @@ const importToRequire = (code: string) => {
 };
 
 const compileCode = (code: string) => {
-  const refinedCode = `{
+  const refinedCode = `
       ${importToRequire(code)}
-      if (typeof Example !== "undefined") {
+      if (Example && typeof Example !== "undefined") {
         return <Example />;
       }
-    }
   `;
   const { code: compiledCode } = transform(refinedCode, {
     objectAssign: true
   });
   const depsMap: any = {
     react: React,
-    "react-dom": ReactDom,
     "@pulsar-ui/core": require("@pulsar-ui/core")
   };
   const requireMap = (path: string) => depsMap[path];
@@ -38,6 +37,10 @@ const compileCode = (code: string) => {
   const render = new Function("require", "React", compiledCode);
   return render(requireMap, React);
 };
+
+const StyledDiv = styled("div")`
+  margin: 3rem 0;
+`;
 
 export const Preview = ({ code }: PreviewProps) => {
   const wrapperRef = React.useRef<HTMLDivElement>(null);
@@ -88,7 +91,7 @@ export const Preview = ({ code }: PreviewProps) => {
   return (
     <ErrorBoundary>
       {error && <pre>{error.toString()}</pre>}
-      <div ref={wrapperRef}>{rendered}</div>
+      <StyledDiv ref={wrapperRef}>{rendered}</StyledDiv>
     </ErrorBoundary>
   );
 };
