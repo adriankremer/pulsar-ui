@@ -7,6 +7,8 @@ import "codemirror/lib/codemirror.css";
 import "codemirror/theme/dracula.css";
 import { Editor, useEditorState } from "../components/Editor";
 import { Preview } from "../components/Preview";
+import Layout from "../components/Layout";
+import { Sidebar } from "../components/Sidebar";
 
 if (typeof navigator !== "undefined") {
   require("codemirror/mode/jsx/jsx");
@@ -22,8 +24,19 @@ type ComponentProps = {
         title: string;
       };
     };
+    allMarkdownRemark: {
+      edges: {
+        node: {
+          frontmatter: {
+            title: string;
+            path: string;
+          };
+        };
+      }[];
+    };
   };
 };
+
 function getText(props: { children?: React.ReactNode }): string {
   const children = React.Children.toArray(props.children);
   return children.reduce<string>((acc, curr) => {
@@ -53,8 +66,16 @@ const { Compiler: renderAst } = new RehypeReact({
 });
 
 const Component = ({ data }: ComponentProps) => {
+  const { edges: components } = data.allMarkdownRemark;
   const { htmlAst } = data.markdownRemark;
-  return <Provider system={system}>{renderAst(htmlAst)}</Provider>;
+  return (
+    <Provider system={system}>
+      <Layout>
+        <Sidebar items={components} />
+        {renderAst(htmlAst)}
+      </Layout>
+    </Provider>
+  );
 };
 
 export const pageQuery = graphql`
@@ -64,6 +85,16 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+      }
+    }
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+          }
+        }
       }
     }
   }
