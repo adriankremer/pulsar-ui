@@ -2,7 +2,7 @@ import React from "react";
 import { useToken } from "@pulsar-ui/core";
 import { palette as defaultPalette } from "../palette";
 
-export function getPalette(palette = defaultPalette, name = "primary") {
+export function getPalette(palette = defaultPalette, name: string = "white") {
   if (!name) return undefined;
   return palette[name];
 }

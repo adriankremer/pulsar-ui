@@ -13,11 +13,12 @@
     "build": "rollup -c"
   },
   "dependencies": {
-    "@pulsar-ui/core": "^0.3.1",
-    "@types/color": "3.0.0",
     "color": "3.1.0"
   },
   "devDependencies": {
+    "@pulsar-ui/core": "^0.3.1",
+    "@types/color": "3.0.0",
+    "react": "16.8.1",
     "rollup-plugin-proxy-directories": "1.2.0"
   },
   "peerDependencies": {
