@@ -27,10 +27,10 @@ module.exports = {
       "babel-plugin-module-resolver",
       {
         alias: {
-          "^pulsar-ui/core$": "pulsar-ui/src",
-          "^pulsar-ui/core/(.+)": "pulsar-ui/src/\\1",
-          "^pulsar-ui/core([^/]*)$": "pulsar-ui-\\1/src",
-          "^pulsar-ui/core([^/]*)/(.+)": "pulsar-ui-\\1/src/\\2"
+          "^@pulsar-ui/core$": "../pulsar-ui/src",
+          "^@pulsar-ui/core/(.+)": "../pulsar-ui/src/\\1",
+          "^@pulsar-ui/([^/]*)$": "../pulsar-ui-\\1/src",
+          "^@pulsar-ui/([^/]*)/(.+)": "../pulsar-ui-\\1/src/\\2"
         }
       }
     ]

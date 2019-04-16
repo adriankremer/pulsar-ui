@@ -2,7 +2,7 @@ const babel = require("rollup-plugin-babel");
 const resolve = require("rollup-plugin-node-resolve");
 const replace = require("rollup-plugin-replace");
 const commonjs = require("rollup-plugin-commonjs");
-const { uglify } = require("rollup-plugin-uglify");
+const { terser } = require("rollup-plugin-terser");
 const ignore = require("rollup-plugin-ignore");
 const { camelCase, upperFirst } = require("lodash");
 
@@ -19,7 +19,8 @@ const makeExternalPredicate = externalArr => {
 const getExternal = (umd, pkg) => {
   const external = [
     ...(pkg.peerDependencies ? Object.keys(pkg.peerDependencies) : []),
-    "prop-types"
+    "prop-types",
+    "color"
   ];
   const allExternal = [...external, ...Object.keys(pkg.dependencies)];
   return makeExternalPredicate(umd ? external : allExternal);
@@ -48,7 +49,7 @@ const getPlugins = umd =>
           }
         }),
         ignore(["stream"]),
-        uglify(),
+        terser(),
         replace({
           "process.env.NODE_ENV": JSON.stringify("production")
         })

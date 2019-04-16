@@ -8,20 +8,21 @@
     "strict": true,
     "strictFunctionTypes": false,
     "declaration": true,
-    "allowSyntheticDefaultImports": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "stripInternal": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "skipLibCheck": true,
     "paths": {
-      "pulsar-ui": ["./node_modules/@pulsar-ui/core"],
-      "pulsar-ui/*": ["./node_modules/@pulsar-ui/core/*"],
-      "pulsar-ui-system": ["./node_modules/@pulsar-ui/system"],
-      "pulsar-ui-system/*": ["./node_modules/@pulsar-ui/system/*"],
-      "pulsar-ui-palette": ["./node_modules/@pulsar-ui/system"],
-      "pulsar-ui-palette/*": ["./node_modules/@pulsar-ui/palette/*"]
+      "@pulsar-ui/core": ["./node_modules/@pulsar-ui/core"],
+      "@pulsar-ui/core/*": ["./node_modules/@pulsar-ui/core/*"],
+      "@pulsar-ui/system": ["./node_modules/@pulsar-ui/system"],
+      "@pulsar-ui/system/*": ["./node_modules/@pulsar-ui/system/*"],
+      "@pulsar-ui/palette": ["./node_modules/@pulsar-ui/palette"],
+      "@pulsar-ui/palette/*": ["./node_modules/@pulsar-ui/palette/*"]
     }
   }
 }
