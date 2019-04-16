@@ -1,8 +1,12 @@
 import { createComponent } from "../utils/createComponent";
 import { useProps } from "../System/useProps";
+import { useOptions } from "../System/useOptions";
 
-export function useAvatar({ ...options }) {
-  const htmlProps = useProps("useButton", options);
+export type AvatarProps = React.ImgHTMLAttributes<any>;
+
+export function useAvatar({ ...options }, htmlProps: AvatarProps) {
+  options = useOptions("useAvatar", options, htmlProps);
+  htmlProps = useProps("useAvatar", options, htmlProps);
   return htmlProps;
 }
 
