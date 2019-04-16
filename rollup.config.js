@@ -17,7 +17,10 @@ const makeExternalPredicate = externalArr => {
 };
 
 const getExternal = (umd, pkg) => {
-  const external = [...Object.keys(pkg.peerDependencies), "prop-types"];
+  const external = [
+    ...(pkg.peerDependencies ? Object.keys(pkg.peerDependencies) : []),
+    "prop-types"
+  ];
   const allExternal = [...external, ...Object.keys(pkg.dependencies)];
   return makeExternalPredicate(umd ? external : allExternal);
 };

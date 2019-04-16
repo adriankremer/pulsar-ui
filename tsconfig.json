@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
@@ -12,6 +13,15 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "stripInternal": true
+    "stripInternal": true,
+    "skipLibCheck": true,
+    "paths": {
+      "pulsar-ui": ["./node_modules/@pulsar-ui/core"],
+      "pulsar-ui/*": ["./node_modules/@pulsar-ui/core/*"],
+      "pulsar-ui-system": ["./node_modules/@pulsar-ui/system"],
+      "pulsar-ui-system/*": ["./node_modules/@pulsar-ui/system/*"],
+      "pulsar-ui-palette": ["./node_modules/@pulsar-ui/system"],
+      "pulsar-ui-palette/*": ["./node_modules/@pulsar-ui/palette/*"]
+    }
   }
 }

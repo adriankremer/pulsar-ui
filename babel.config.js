@@ -1,13 +1,14 @@
-const testing = process.env.NODE_ENV === "test";
+const test = process.env.NODE_ENV === "test";
+const prod = process.env.NODE_ENV === "production";
 
 module.exports = {
   presets: [
     [
       "@babel/preset-env",
       {
-        modules: testing ? "commonjs" : false,
+        modules: test ? "commonjs" : false,
         loose: true,
-        targets: testing
+        targets: test
           ? { node: "current" }
           : {
               browsers: "defaults"
@@ -18,8 +19,20 @@ module.exports = {
     "@babel/preset-react"
   ],
   plugins: [
+    "babel-plugin-dev-expression",
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-proposal-class-properties",
-    "@babel/plugin-proposal-object-rest-spread"
+    "@babel/plugin-proposal-object-rest-spread",
+    !prod && [
+      "babel-plugin-module-resolver",
+      {
+        alias: {
+          "^pulsar-ui/core$": "pulsar-ui/src",
+          "^pulsar-ui/core/(.+)": "pulsar-ui/src/\\1",
+          "^pulsar-ui/core([^/]*)$": "pulsar-ui-\\1/src",
+          "^pulsar-ui/core([^/]*)/(.+)": "pulsar-ui-\\1/src/\\2"
+        }
+      }
+    ]
   ].filter(Boolean)
 };
