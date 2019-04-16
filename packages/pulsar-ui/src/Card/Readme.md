@@ -3,6 +3,16 @@ title: "Card"
 path: "/components/card"
 ---
 
-```js
-<Card>I'm card</Card>
+# Card
+
+```jsx
+import { Card } from "@pulsar-ui/core";
+
+function Example() {
+  return (
+    <>
+      <Card system={{palette: "gray"}}>me card</Card>
+    </>
+    );
+}
 ```

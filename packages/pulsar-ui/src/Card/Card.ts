@@ -1,8 +1,14 @@
 import { createComponent } from "../utils/createComponent";
 import { useProps } from "../System/useProps";
+import { useOptions } from "../System/useOptions";
+import { useBox } from "../Box";
 
-export function useCard({ ...options }) {
-  const htmlProps = useProps("useButton", options);
+type CardProps = React.HTMLAttributes<any>;
+
+export function useCard({ ...options }, htmlProps: CardProps) {
+  options = useOptions("useCard", options, htmlProps);
+  htmlProps = useProps("useCard", options, htmlProps);
+  htmlProps = useBox(options, htmlProps);
   return htmlProps;
 }
 
