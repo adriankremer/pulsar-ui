@@ -6,7 +6,7 @@
     "**/__tests__/**",
     "**/*.md"
   ],
-  "version": "0.3.1",
+  "version": "0.4.0",
   "changelog": {
     "repo": "adriankremer/pulsar-ui",
     "labels": {

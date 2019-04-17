@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/adriankremer/pulsar-ui/compare/v0.3.1...v0.4.0) (2019-04-17)
+
+
+### Features
+
+* **core:** added toolbar ([1939df4](https://github.com/adriankremer/pulsar-ui/commit/1939df4))
+* **core,system:** added paper, input and tabbable ([799b4c7](https://github.com/adriankremer/pulsar-ui/commit/799b4c7))
+* **core,system:** card, grid, toolbar, variable utils ([4c74a7c](https://github.com/adriankremer/pulsar-ui/commit/4c74a7c))
+* **grid:** added grid with demo cards ([6b4f88d](https://github.com/adriankremer/pulsar-ui/commit/6b4f88d))
+* **grid:** added theme for responsive 12 column grid ([7e39794](https://github.com/adriankremer/pulsar-ui/commit/7e39794))
+* **grid:** updated grid ([276b2f7](https://github.com/adriankremer/pulsar-ui/commit/276b2f7))
+* **styleguide:** added font, templates, toolbar ([0a81ee0](https://github.com/adriankremer/pulsar-ui/commit/0a81ee0))
+* **theme:** added global styles with webfont ([b896f95](https://github.com/adriankremer/pulsar-ui/commit/b896f95))
+* added jest cfg to website, updated button test ([89949f3](https://github.com/adriankremer/pulsar-ui/commit/89949f3))
+* migrated (old) compopnents to new system and hooks ([a625a80](https://github.com/adriankremer/pulsar-ui/commit/a625a80))
+* **website:** makeup ([df20f55](https://github.com/adriankremer/pulsar-ui/commit/df20f55))
+
+
+
+
+
 ## [0.3.1](https://github.com/adriankremer/pulsar-ui/compare/v0.2.0...v0.3.1) (2019-03-19)
 
 **Note:** Version bump only for package @pulsar-ui/core
