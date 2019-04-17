@@ -1,6 +1,6 @@
 {
   "name": "@pulsar-ui/system",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "main": "lib/index.js",
   "module": "es/index.js",
   "unpkg": "dist/pulsar-ui-system-default.min.js",
@@ -14,11 +14,11 @@
     "build": "rollup -c"
   },
   "dependencies": {
-    "@pulsar-ui/palette": "^0.4.1",
+    "@pulsar-ui/palette": "^0.4.2",
     "emotion": "10.0.9"
   },
   "devDependencies": {
-    "@pulsar-ui/core": "^0.4.1",
+    "@pulsar-ui/core": "^0.4.2",
     "react": "16.8.1",
     "react-dom": "16.8.1",
     "rollup-plugin-proxy-directories": "1.2.0"
