@@ -2,7 +2,8 @@
   "name": "@pulsar-ui/palette",
   "version": "0.4.1",
   "author": "Adrian Kremer <a.kr3mer@gmail.com>",
-  "license": "MIT",
+  "repository": "adriankremer/pulsar-ui",
+  "license": "ISC",
   "main": "lib/index.js",
   "module": "es/index.js",
   "unpkg": "dist/pulsar-ui-palette.min.js",
@@ -24,5 +25,8 @@
   "peerDependencies": {
     "react": "16.8.1"
   },
-  "gitHead": "ddbb307d7ba322af7b9fa262cb39e8580f718a8a"
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "3ad75b7cb0ca27b8a6e30b9964a220a30b4ccc14"
 }
