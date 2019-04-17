@@ -26,5 +26,6 @@
     "@pulsar-ui/core": "^0.3.1",
     "react": "16.8.1",
     "react-dom": "16.8.1"
-  }
+  },
+  "gitHead": "ddbb307d7ba322af7b9fa262cb39e8580f718a8a"
 }
