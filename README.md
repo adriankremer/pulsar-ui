@@ -7,23 +7,37 @@ Style-independent components with React Hooks. The Core package serves all the c
 
 [Documentation](https://pulsar-ui.netlify.com/)
 
-[![Build Status][travis-image]][travis-url] [![License][license-image]][license-url]  [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![Build Status][travis-image]][travis-url] [![License][license-image]][license-url]  
 
+## Installation
+```sh
+npm i @pulsar-ui/core @pulsar-ui/system
+```
 
 ## Usage
-```sh
-yarn || npm i
+
+```js
+import React from "react";
+import { Provider, Avatar } from "@pulsar-ui/core";
+import * as system from "@pulsar-ui/system";
+
+export const App = () => (
+  <Provider system={system}>
+    <Avatar src="https://placekitten.com/100/100" />
+  </Provider>
+)
 ```
+
+
 
 ### License
 
-[MIT license](http://opensource.org/licenses/MIT)
+[ISC license](http://opensource.org/licenses/ISC)
 
 [travis-image]: https://travis-ci.org/adriankremer/pulsar-ui.svg?branch=master
 [travis-url]: https://travis-ci.org/adriankremer/pulsar-ui
 [license-image]: https://img.shields.io/badge/license-MIT-green.svg
 [license-url]: http://opensource.org/licenses/MIT
-[logo-image]: ./assets/logo.svg
 
 
 ## Contributors
