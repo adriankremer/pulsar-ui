@@ -1,13 +1,18 @@
-# Pulsar UI
+<div style="text-align:center">
+  <img src="./assets/logo.svg" />
+  <h1>Pulsar UI</h1>
+</div
 
-Pulsar UI is just another UI library ¯\\_(ツ)_/¯ using CSS in JS to provide a highly reusable and themeable experience.
+Style-independent components with React Hooks. The Core package serves all the components and a context-provider. The provider consumes a design-system (e.g. @pulsar-ui/system) that uses component hooks to invoke component properties and options.
+
+[Documentation](https://pulsar-ui.netlify.com/)
 
 [![Build Status][travis-image]][travis-url] [![License][license-image]][license-url]  [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 
 ## Usage
 ```sh
-yarn || npm i
+yarn || npm i
 ```
 
 ### License
@@ -18,6 +23,7 @@ yarn || npm i
 [travis-url]: https://travis-ci.org/adriankremer/pulsar-ui
 [license-image]: https://img.shields.io/badge/license-MIT-green.svg
 [license-url]: http://opensource.org/licenses/MIT
+[logo-image]: ./assets/logo.svg
 
 
 ## Contributors

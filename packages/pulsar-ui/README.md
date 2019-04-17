@@ -1,39 +1,38 @@
-# @pulsar-ui/core
+<div style="text-align:center">
+  <img src="../../assets/logo.svg" />
+  <h1>Pulsar UI</h1>
+</div
 
-Pulsar UI is just another UI library ¯\\_(ツ)_/¯ using [Emotion](https://emotion.sh/docs/introduction) (fast, common CSS in JS) and [Reuse](https://github.com/diegohaz/reuse) to provide a powerful and themeable component composition. 
+Style-independent components with React Hooks. The Core package serves all the components and a context-provider. The provider consumes a design-system (e.g. @pulsar-ui/system) that uses component hooks to invoke component properties and options.
+
+[Documentation](https://pulsar-ui.netlify.com/)
 
 [![Build Status][travis-image]][travis-url] [![License][license-image]][license-url]  
 
 ## Installation
 ```sh
-npm i @pulsar-ui/core
-```
-optional:
-```sh
-npm i @pulsar-ui/theme-default
+npm i @pulsar-ui/core @pulsar-ui/system
 ```
 
 ## Usage
 
 ```js
 import React from "react";
-import { ThemeProvider } from "@pulsar-ui/core/styled";
-import Avatar from "@pulsar-ui/core/Avatar";
-import Theme from "@pulsar-ui/theme-default"; // 
+import { Provider, Avatar } from "@pulsar-ui/core";
+import * as system from "@pulsar-ui/system";
 
-export const App = (props) => (
-  <ThemeProvider theme={Theme}>
+export const App = () => (
+  <Provider system={system}>
     <Avatar src="https://placekitten.com/100/100" />
-  </ThemeProvider>
+  </Provider>
 )
 ```
 
-Currently it is just a small set of elements but it will grow over time because this UI will be used in all sorts of projects.
 
 
 ### License
 
-[MIT license](http://opensource.org/licenses/MIT)
+[ISC license](http://opensource.org/licenses/ISC)
 
 [travis-image]: https://travis-ci.org/adriankremer/pulsar-ui.svg?branch=master
 [travis-url]: https://travis-ci.org/adriankremer/pulsar-ui
