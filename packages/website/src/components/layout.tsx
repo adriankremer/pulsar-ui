@@ -1,10 +1,3 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React from "react";
 import { Provider } from "@pulsar-ui/core";
 import * as system from "@pulsar-ui/system";
