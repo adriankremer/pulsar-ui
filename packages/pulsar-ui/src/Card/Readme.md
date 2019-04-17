@@ -21,7 +21,8 @@ function Example() {
           </p>
         </CardContent>
         <CardContent>
-          <MdPets /> <span>4</span>
+          <MdPets />
+          <span>4</span>
         </CardContent>
       </Card>
     </>

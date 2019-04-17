@@ -9,5 +9,6 @@ export * from "./Input";
 export * from "./Tabbable";
 export * from "./Toolbar";
 export * from "./ToolbarContent";
+export * from "./ToolbarItem";
 export * from "./Grid";
 export * from "./GridCell";

@@ -5,14 +5,13 @@ import { Provider } from "@pulsar-ui/core";
 import * as system from "@pulsar-ui/system";
 import "codemirror/lib/codemirror.css";
 import "codemirror/theme/dracula.css";
+import "./codemirror.css";
 import { Editor, useEditorState } from "../components/Editor";
 import { Preview } from "../components/Preview";
-import Layout from "../components/Layout";
-import { Sidebar } from "../components/Sidebar";
+import { ComponentLayout } from "../components/ComponentLayout";
 
 if (typeof navigator !== "undefined") {
   require("codemirror/mode/jsx/jsx");
-  require("codemirror/mode/htmlmixed/htmlmixed");
 }
 
 type ComponentProps = {
@@ -23,16 +22,6 @@ type ComponentProps = {
       frontmatter: {
         title: string;
       };
-    };
-    allMarkdownRemark: {
-      edges: {
-        node: {
-          frontmatter: {
-            title: string;
-            path: string;
-          };
-        };
-      }[];
     };
   };
 };
@@ -66,14 +55,10 @@ const { Compiler: renderAst } = new RehypeReact({
 });
 
 const Component = ({ data }: ComponentProps) => {
-  const { edges: components } = data.allMarkdownRemark;
   const { htmlAst } = data.markdownRemark;
   return (
     <Provider system={system}>
-      <Layout>
-        <Sidebar items={components} />
-        {renderAst(htmlAst)}
-      </Layout>
+      <ComponentLayout>{renderAst(htmlAst)}</ComponentLayout>
     </Provider>
   );
 };
@@ -85,16 +70,6 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-      }
-    }
-    allMarkdownRemark {
-      edges {
-        node {
-          frontmatter {
-            title
-            path
-          }
-        }
       }
     }
   }

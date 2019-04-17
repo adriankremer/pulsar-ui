@@ -6,9 +6,10 @@
  */
 
 import React from "react";
+import { Provider } from "@pulsar-ui/core";
+import * as system from "@pulsar-ui/system";
 import PropTypes from "prop-types";
-import { StaticQuery, graphql } from "gatsby";
-
+import styled from "@emotion/styled";
 import Header from "./header";
 import "./layout.css";
 
@@ -16,27 +17,18 @@ type LayoutProps = {
   children: React.ReactNode;
 };
 
+const Container = styled("div")`
+  display: grid;
+  justify-content: center;
+`;
+
 const Layout = ({ children }: LayoutProps) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div>
-          <main>{children}</main>
-          <footer>...</footer>
-        </div>
-      </>
-    )}
-  />
+  <Provider system={system}>
+    <Header />
+    <Container>
+      <main>{children}</main>
+    </Container>
+  </Provider>
 );
 
 Layout.propTypes = {
