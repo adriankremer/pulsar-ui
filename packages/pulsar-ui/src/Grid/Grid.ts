@@ -1,20 +1,12 @@
 import { createComponent } from "../utils/createComponent";
 import { useProps } from "../System/useProps";
+import { BoxProps, BoxOptions } from "../Box";
 
-export function useGrid({ ...options }) {
-  let htmlProps = useProps("useButton", options);
+export type GridOptions = BoxOptions;
+export type GridProps = BoxProps;
 
-  htmlProps = {
-    ...htmlProps,
-    ...{
-      style: {
-        display: "grid",
-        gridGap: "15px 20px",
-        gridTemplateColumns: "repeat(12, 1fr)"
-      }
-    }
-  };
-
+export function useGrid({ ...options }: GridOptions, htmlProps: GridProps) {
+  htmlProps = useProps("useGrid", options, htmlProps);
   return htmlProps;
 }
 

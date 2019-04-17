@@ -1,30 +1,16 @@
 import { cx, css } from "emotion";
 import { CardProps } from "@pulsar-ui/core";
-import {
-  useBoxProps as usePaletteBoxProps,
-  getPalette,
-  useContrast
-} from "@pulsar-ui/palette";
 import { PulsarBoxProps } from "./Box";
 
 export function useCardProps(
-  { system }: PulsarBoxProps,
+  _: PulsarBoxProps,
   { className, ...htmlProps }: CardProps
 ) {
-  const {
-    style: { backgroundColor }
-  } = usePaletteBoxProps({ system });
-
-  const defaultBackgroundColor = system
-    ? backgroundColor
-    : getPalette(undefined, "white");
-
-  const color = useContrast(defaultBackgroundColor);
-
   const card = css`
-    background-color: ${defaultBackgroundColor};
-    color: ${color};
+    display: inline-grid;
+    grid-template-rows: "start center end"/ 1fr auto 1fr;
     border-radius: 0.3rem;
+    overflow: hidden;
   `;
   return { ...htmlProps, className: cx(card, className) };
 }

@@ -1,4 +1,3 @@
-import React from "react";
 import { useProps } from "../System";
 import { useBox, BoxProps, BoxOptions } from "../Box";
 import { createComponent } from "../utils/createComponent";

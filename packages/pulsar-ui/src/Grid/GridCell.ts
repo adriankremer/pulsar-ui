@@ -1,9 +1,15 @@
 import { createComponent } from "../utils/createComponent";
 import { useProps } from "../System/useProps";
+import { BoxOptions, BoxProps } from "../Box";
 
-export function useGridCell({ ...options }) {
-  const htmlProps = useProps("useButton", options);
+export type GridCellOptions = BoxOptions;
+export type GridCellProps = BoxProps;
 
+export function useGridCell(
+  { ...options }: GridCellOptions,
+  htmlProps: GridCellProps
+) {
+  htmlProps = useProps("useGridCell", options, htmlProps);
   return htmlProps;
 }
 

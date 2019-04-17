@@ -11,10 +11,15 @@ type PreviewProps = {
 };
 
 const importToRequire = (code: string) => {
-  // import { xy } from "xylib"; => const { xy } = require("xylib");
-  return code.replace(
-    /import {([^}]+)} from ([^\s;]+);?/g,
-    "const {$1} = require($2);"
+  return (
+    code
+      // import { xy } from "xylib"; => const { xy } = require("xylib");
+      .replace(
+        /import {([^}]+)} from ([^\s;]+);?/g,
+        "const {$1} = require($2);"
+      )
+      // import xy from "xylib"; => const xy = require("xylib");
+      .replace(/import ([^}]+) from ([^\s;]+);?/g, "const $1 = require($2);")
   );
 };
 
@@ -30,7 +35,9 @@ const compileCode = (code: string) => {
   });
   const depsMap: any = {
     react: React,
-    "@pulsar-ui/core": require("@pulsar-ui/core")
+    "@pulsar-ui/core": require("@pulsar-ui/core"),
+    "react-icons/md": require("react-icons/md"),
+    "./logo.svg": require("../../../../assets/logo.svg")
   };
   const requireMap = (path: string) => depsMap[path];
   // eslint-disable-next-line no-new-func

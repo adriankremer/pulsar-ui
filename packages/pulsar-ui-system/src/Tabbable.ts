@@ -1,11 +1,11 @@
-import { AvatarProps } from "@pulsar-ui/core";
+import { TabbableProps } from "@pulsar-ui/core";
 import { useBoxProps as useBoxPalette, useFade } from "@pulsar-ui/palette";
 import { css, cx } from "emotion";
 import { PulsarBoxProps } from "./Box";
 
 export function useTabbableProps(
   { system }: PulsarBoxProps,
-  { className, ...htmlProps }: AvatarProps
+  { className, ...htmlProps }: TabbableProps
 ) {
   const {
     style: { backgroundColor }

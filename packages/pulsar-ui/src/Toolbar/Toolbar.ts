@@ -1,21 +1,16 @@
 import { createComponent } from "../utils/createComponent";
 import { useProps } from "../System/useProps";
+import { BoxProps, BoxOptions } from "../Box";
 
-export function useToolbar({ ...options }) {
-  let htmlProps = useProps("useButton", options);
+export type ToolbarOptions = BoxOptions;
 
-  htmlProps = {
-    ...htmlProps,
-    ...{
-      style: {
-        display: "grid",
-        gridGap: "15px 20px",
-        gridTemplate: `"start center end"/ 1fr auto 1fr`,
-        padding: ".5rem"
-      }
-    }
-  };
+export type ToolbarProps = BoxProps;
 
+export function useToolbar(
+  { ...options }: ToolbarOptions,
+  htmlProps: ToolbarProps
+) {
+  htmlProps = useProps("useToolbar", options, htmlProps);
   return htmlProps;
 }
 
