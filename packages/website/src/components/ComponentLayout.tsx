@@ -11,7 +11,7 @@ import { Grid, GridCell, Provider } from "@pulsar-ui/core";
 import * as system from "@pulsar-ui/system";
 import styled from "@emotion/styled";
 import Header from "./header";
-import "./layout.css";
+import "./style.css";
 import { Sidebar } from "./Sidebar";
 
 type LayoutProps = {

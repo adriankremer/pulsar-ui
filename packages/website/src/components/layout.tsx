@@ -11,7 +11,7 @@ import * as system from "@pulsar-ui/system";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
 import Header from "./header";
-import "./layout.css";
+import "./style.css";
 
 type LayoutProps = {
   children: React.ReactNode;
