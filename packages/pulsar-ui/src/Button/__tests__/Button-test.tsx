@@ -7,6 +7,7 @@ test("render", () => {
   expect(getByText("test")).toMatchInlineSnapshot(`
 <button
   role="button"
+  tabindex="0"
   type="button"
 >
   test

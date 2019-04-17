@@ -11,6 +11,5 @@ module.exports = {
     "react-testing-library/cleanup-after-each",
     "raf/polyfill",
     "<rootDir>/jest.setup.js"
-  ],
-  snapshotSerializers: ["jest-emotion"]
+  ]
 };
