@@ -1,0 +1,7 @@
+{
+  "name": "@pulsar-ui/system/utils/systemVariables",
+  "private": true,
+  "main": "../../lib/utils/systemVariables",
+  "module": "../../es/utils/systemVariables",
+  "types": "../../ts/utils/systemVariables"
+}

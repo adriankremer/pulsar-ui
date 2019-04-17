@@ -1,0 +1,7 @@
+{
+  "name": "@pulsar-ui/system/utils/objectToCss",
+  "private": true,
+  "main": "../../lib/utils/objectToCss",
+  "module": "../../es/utils/objectToCss",
+  "types": "../../ts/utils/objectToCss"
+}

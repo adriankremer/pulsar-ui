@@ -8,7 +8,7 @@ export function usePaperProps(
   { className, ...htmlProps }: AvatarProps
 ) {
   const {
-    style: { backgroundColor, color }
+    style: { backgroundColor }
   } = useBoxPalette({ system });
   const shadow1 = useDarken(backgroundColor, 0.2);
   const shadow2 = useDarken(backgroundColor, 0.3);
