@@ -1,4 +1,4 @@
-<div style="text-align:center">
+<div align="center">
   <img src="./assets/logo.svg" />
   <h1>Pulsar UI</h1>
 </div
