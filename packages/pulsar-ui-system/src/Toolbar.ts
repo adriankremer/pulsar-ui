@@ -1,7 +1,7 @@
 import { cx, css } from "emotion";
 import { ToolbarProps } from "@pulsar-ui/core";
-import { PulsarBoxProps } from "./Box";
 import { useBoxProps as useBoxPalette } from "@pulsar-ui/palette";
+import { PulsarBoxProps } from "./Box";
 
 export function useToolbarProps(
   { system }: PulsarBoxProps,
