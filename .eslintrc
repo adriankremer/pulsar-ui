@@ -43,6 +43,7 @@
     "react/jsx-filename-extension": "off",
     "react/destructuring-assignment": "off",
     "react/button-has-type": "off",
+    "import/no-unresolved": "off",
     "import/order": [
       "error",
       {
