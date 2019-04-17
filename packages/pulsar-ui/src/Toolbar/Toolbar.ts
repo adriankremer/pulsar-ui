@@ -1,21 +1,20 @@
-import use from "reuse";
-import { prop, theme } from "styled-tools";
-import styled from "../styled";
-import Box, { BoxProps } from "../Box";
+import { createComponent } from "../utils/createComponent";
+import { useProps } from "../System/useProps";
+import { BoxProps, BoxOptions } from "../Box";
 
-export interface ToolbarProps extends BoxProps {
-  gutter?: string;
+export type ToolbarOptions = BoxOptions;
+
+export type ToolbarProps = BoxProps;
+
+export function useToolbar(
+  { ...options }: ToolbarOptions,
+  htmlProps: ToolbarProps
+) {
+  htmlProps = useProps("useToolbar", options, htmlProps);
+  return htmlProps;
 }
 
-const Toolbar = styled(Box)<ToolbarProps>`
-  display: grid;
-  grid-gap: ${prop("gutter")};
-  grid-template:
-    "start center end"
-    / 1fr auto 1fr;
-  padding: ${prop("gutter")};
-
-  ${theme("Toolbar")};
-`;
-
-export default use(Toolbar, "div");
+export const Toolbar = createComponent({
+  as: "div",
+  useHook: useToolbar
+});

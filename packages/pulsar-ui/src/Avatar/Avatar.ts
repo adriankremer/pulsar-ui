@@ -1,11 +1,16 @@
-import use from "reuse";
-import styled from "../styled";
-import Box, { BoxProps } from "../Box";
+import { createComponent } from "../utils/createComponent";
+import { useProps } from "../System/useProps";
+import { useOptions } from "../System/useOptions";
 
-export interface IAvatarProps extends BoxProps {
-  src: string;
+export type AvatarProps = React.ImgHTMLAttributes<any>;
+
+export function useAvatar({ ...options }, htmlProps: AvatarProps) {
+  options = useOptions("useAvatar", options, htmlProps);
+  htmlProps = useProps("useAvatar", options, htmlProps);
+  return htmlProps;
 }
 
-const Avatar = styled(Box)<IAvatarProps>(props => props.theme.Avatar);
-
-export default use(Avatar, "img");
+export const Avatar = createComponent({
+  as: "img",
+  useHook: useAvatar
+});

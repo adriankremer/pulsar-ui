@@ -1,8 +1,20 @@
-import styled from "../styled";
-import Box, { BoxProps } from "../Box";
+import { createComponent } from "../utils/createComponent";
+import { useProps } from "../System/useProps";
+import { useOptions } from "../System/useOptions";
+import { useBox } from "../Box";
+import { usePaper } from "../Paper";
 
-interface CardProps extends BoxProps {}
+export type CardProps = React.HTMLAttributes<any>;
 
-const Card = styled(Box)<CardProps>(props => props.theme.Card);
+export function useCard({ ...options }, htmlProps: CardProps) {
+  options = useOptions("useCard", options, htmlProps);
+  htmlProps = useProps("useCard", options, htmlProps);
+  htmlProps = useBox(options, htmlProps);
+  htmlProps = usePaper(options, htmlProps);
+  return htmlProps;
+}
 
-export default Card;
+export const Card = createComponent({
+  as: "div",
+  useHook: useCard
+});

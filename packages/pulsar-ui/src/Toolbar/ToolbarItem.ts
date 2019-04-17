@@ -1,12 +1,20 @@
-import use from "reuse";
-import { theme } from "styled-tools";
-import Box, { BoxProps } from "../Box";
-import styled from "../styled";
+import { createComponent } from "../utils/createComponent";
+import { useProps } from "../System/useProps";
+import { BoxProps, BoxOptions } from "../Box";
 
-export interface ToolbarItemProps extends BoxProps {}
+export type ToolbarItemOptions = BoxOptions;
+export type ToolbarItemProps = BoxProps;
 
-const ToolbarItem = styled(Box)<ToolbarItemProps>`
-  ${theme("ToolbarItem")}
-`;
+export function useToolbarItem(
+  { ...options }: ToolbarItemOptions,
+  htmlProps: ToolbarItemProps
+) {
+  htmlProps = useProps("useToolbarItem", options, htmlProps);
 
-export default use(ToolbarItem, "div");
+  return htmlProps;
+}
+
+export const ToolbarItem = createComponent({
+  as: "div",
+  useHook: useToolbarItem
+});

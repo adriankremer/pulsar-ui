@@ -1,0 +1,9 @@
+.cm-s-dracula.CodeMirror {
+  background-color: #342f3a !important;
+}
+.cm-s-dracula span.cm-keyword {
+  color: #c396f7;
+}
+.cm-s-dracula span.cm-def {
+  color: #8bccf3;
+}

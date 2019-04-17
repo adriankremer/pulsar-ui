@@ -1,0 +1,7 @@
+{
+  "name": "@pulsar-ui/core/utils/createComponent",
+  "private": true,
+  "main": "../../lib/utils/createComponent",
+  "module": "../../es/utils/createComponent",
+  "types": "../../ts/utils/createComponent"
+}

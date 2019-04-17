@@ -1,0 +1,27 @@
+{
+  "name": "@pulsar-ui/palette",
+  "version": "0.3.1",
+  "author": "Adrian Kremer <a.kr3mer@gmail.com>",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "unpkg": "dist/pulsar-ui-palette.min.js",
+  "types": "ts",
+  "scripts": {
+    "build:ts": "tsc --emitDeclarationOnly",
+    "prebuild": "npm run build:ts",
+    "build": "rollup -c"
+  },
+  "dependencies": {
+    "color": "3.1.0"
+  },
+  "devDependencies": {
+    "@pulsar-ui/core": "^0.3.1",
+    "@types/color": "3.0.0",
+    "react": "16.8.1",
+    "rollup-plugin-proxy-directories": "1.2.0"
+  },
+  "peerDependencies": {
+    "react": "16.8.1"
+  }
+}

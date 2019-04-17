@@ -1,9 +1,14 @@
-import use from "reuse";
-import styled from "../styled";
-import Box, { BoxProps } from "../Box";
+import { createComponent } from "../utils/createComponent";
+import { useProps } from "../System/useProps";
 
-export interface IInputProps extends BoxProps {}
+export type InputProps = React.InputHTMLAttributes<any>;
 
-const Input = styled(Box)<IInputProps>(props => props.theme.Input);
+export function useInput({ ...options }, htmlProps: InputProps) {
+  htmlProps = useProps("useInput", options, htmlProps);
+  return htmlProps;
+}
 
-export default use(Input, "input");
+export const Input = createComponent({
+  as: "input",
+  useHook: useInput
+});

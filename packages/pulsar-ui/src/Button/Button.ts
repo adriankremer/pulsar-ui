@@ -1,12 +1,33 @@
-import use from "reuse";
-import { theme } from "styled-tools";
-import styled from "../styled";
-import Box, { BoxProps } from "../Box";
+import { createComponent } from "../utils/createComponent";
+import { useProps } from "../System/useProps";
+import { useOptions } from "../System/useOptions";
+import { useBox } from "../Box";
+import { usePaper } from "../Paper";
+import { useTabbable } from "../Tabbable";
 
-export interface IButtonProps extends BoxProps {}
+export type ButtonOptions = {};
 
-const Button = styled(Box)<IButtonProps>`
-  ${theme("Button")}
-`;
+export type ButtonProps = React.ButtonHTMLAttributes<any>;
 
-export default use(Button, "button");
+export function useButton({ ...options }, htmlProps: ButtonProps) {
+  options = useOptions("useButton", options, htmlProps);
+  htmlProps = useProps("useButton", options, htmlProps);
+
+  htmlProps = {
+    ...htmlProps,
+    ...{
+      role: "button",
+      type: "button"
+    }
+  };
+
+  htmlProps = useBox(options, htmlProps);
+  htmlProps = usePaper(options, htmlProps);
+  htmlProps = useTabbable(options, htmlProps);
+  return htmlProps;
+}
+
+export const Button = createComponent({
+  as: "button",
+  useHook: useButton
+});
