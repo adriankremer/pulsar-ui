@@ -1,8 +1,8 @@
 import React from "react";
 import { useToken } from "@pulsar-ui/core";
+import { Palette } from "../types";
 import { isLight } from "./isLight";
 import { getPalette } from "./palette";
-import { Palette } from "../types";
 
 export function contrast(paletteColor?: string) {
   if (!paletteColor) return () => undefined;

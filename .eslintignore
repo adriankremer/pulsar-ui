@@ -3,6 +3,6 @@ es
 lib
 ts
 coverage
-build
 node_modules
-computed
+public
+.cache

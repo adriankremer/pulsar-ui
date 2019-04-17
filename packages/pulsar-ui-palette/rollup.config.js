@@ -1,7 +1,7 @@
 const proxyDirectories = require("rollup-plugin-proxy-directories");
-
 const createConfig = require("../../rollup.config");
 const pkg = require("./package.json");
+
 export default [
   createConfig({
     pkg,

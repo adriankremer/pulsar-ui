@@ -1,6 +1,7 @@
 import { BoxOptions, BoxProps } from "@pulsar-ui/core";
 import { usePalette } from "./utils/palette";
 import { useContrast } from "./utils/contrast";
+
 export type PaletteBoxProps = BoxOptions & {
   system: {
     palette?: string;
