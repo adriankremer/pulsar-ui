@@ -1,7 +1,6 @@
-<div align="center">
+<p align="center">
   <img width="200" src="https://raw.githubusercontent.com/adriankremer/pulsar-ui/master/assets/logo.png" />
-  <h1>Pulsar UI</h1>
-</div>
+</p>
 
 Style-independent components with React Hooks. The Core package serves all the components and a context-provider. The provider consumes a design-system (e.g. @pulsar-ui/system) that uses component hooks to invoke component properties and options.
 
