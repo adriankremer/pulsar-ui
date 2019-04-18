@@ -9,7 +9,6 @@ const IndexPage = () => (
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
-    <h1>Pulsar UI</h1>
   </Layout>
 );
 
