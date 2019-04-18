@@ -11,7 +11,7 @@ type LayoutProps = {
 };
 
 const Container = styled("div")`
-  display: grid;
+  display: flex;
   justify-content: center;
 `;
 
@@ -19,7 +19,15 @@ const Layout = ({ children }: LayoutProps) => (
   <Provider system={system}>
     <Header />
     <Container>
-      <main>{children}</main>
+      <main
+        style={{
+          alignItems: "center",
+          display: "flex",
+          flexDirection: "column"
+        }}
+      >
+        {children}
+      </main>
     </Container>
   </Provider>
 );
