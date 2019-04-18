@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/adriankremer/pulsar-ui/master/assets/logo.svg" />
+  <img src="https://raw.githubusercontent.com/adriankremer/pulsar-ui/master/assets/logo.png" />
   <h1>Pulsar UI</h1>
 </div
 
