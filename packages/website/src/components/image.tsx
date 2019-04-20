@@ -20,7 +20,7 @@ const Image = () => (
         placeholderImage: file(relativePath: { eq: "logo.png" }) {
           childImageSharp {
             fluid(traceSVG: { color: "#573ede" }) {
-              ...GatsbyImageSharpFluid_tracedSVG
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }

@@ -27,7 +27,8 @@ export const App = () => (
 )
 ```
 
-
+### Credits 💖
+Structures and many other ideas like component hooks and system patterns are copied from [@diegohaz's](https://github.com/diegohaz)   [reakit v2](https://github.com/reakit/reakit/tree/next) 
 
 ### License
 
