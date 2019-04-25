@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/adriankremer/pulsar-ui/compare/v0.4.4...v0.5.0) (2019-04-25)
+
+
+### Features
+
+* added ssr to gatsby, removed headline ([7254e22](https://github.com/adriankremer/pulsar-ui/commit/7254e22))
+
+
+
+
+
 ## [0.4.4](https://github.com/adriankremer/pulsar-ui/compare/v0.4.3...v0.4.4) (2019-04-18)
 
 **Note:** Version bump only for package pulsar-ui
