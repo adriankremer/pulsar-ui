@@ -19,7 +19,7 @@
     "type-check": "lerna run type-check",
     "lint": "eslint . --ext js,ts,tsx",
     "dev": "lerna exec --scope @pulsar-ui/core -- npm run dev",
-    "build": "lerna exec --scope @pulsar-ui/* --concurrency 1 -- npm run build",
+    "build": "NODE_ENV=production lerna exec --scope @pulsar-ui/* --concurrency 1 -- npm run build",
     "build:clean": "lerna exec --scope @pulsar-ui/* -- npm run build:clean",
     "website": "lerna exec --scope website -- npm run start",
     "website:build": "lerna exec --scope website -- npm run build",
