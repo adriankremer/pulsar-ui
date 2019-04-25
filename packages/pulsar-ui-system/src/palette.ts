@@ -1,1 +1,1 @@
-export { palette } from "@pulsar-ui/palette";
+export { palette } from "@pulsar-ui/palette/palette";

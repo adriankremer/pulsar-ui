@@ -1,5 +1,5 @@
 import React from "react";
-import { useToken } from "@pulsar-ui/core";
+import { useToken } from "@pulsar-ui/core/System/useToken";
 import { palette as defaultPalette } from "../palette";
 
 export function getPalette(palette = defaultPalette, name: string = "white") {

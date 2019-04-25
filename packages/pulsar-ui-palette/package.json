@@ -23,6 +23,7 @@
     "rollup-plugin-proxy-directories": "1.2.0"
   },
   "peerDependencies": {
+    "@pulsar-ui/core": "^0.4.4",
     "react": "16.8.1"
   },
   "publishConfig": {

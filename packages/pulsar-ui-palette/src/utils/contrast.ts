@@ -1,5 +1,5 @@
 import React from "react";
-import { useToken } from "@pulsar-ui/core";
+import { useToken } from "@pulsar-ui/core/System/useToken";
 import { Palette } from "../types";
 import { isLight } from "./isLight";
 import { getPalette } from "./palette";
